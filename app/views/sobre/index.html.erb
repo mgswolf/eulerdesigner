@@ -1,10 +1,10 @@
 <%= render 'shared/avatar', :about => @sobre %>
 			<div class="greatColl">
-				<h2 class="titleGreatColl">Um Pouco Sobre <%= @sobre.nome %></h2>
+				<h2 class="titleGreatColl">Um Pouco Sobre <%= @sobre.nome unless @sobre.nil? %></h2>
 				<div class="contentGreatColl">
 					
 					<p class="descricao">
-						<%=raw @sobre.descricao %>
+						<%=raw @sobre.descricao unless @sobre.nil?%>
 					</p>
 
 

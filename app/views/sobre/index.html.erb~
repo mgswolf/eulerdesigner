@@ -18,7 +18,7 @@
 						<%=raw projeto.descricao %>
 						</p>
 
-						<span>Visite e conheça mais sobre esse projeto em:<%= link_to projeto.url, projeto.url.to_s, :target=> :blank %></span>
+						<span>Visite e conheça mais sobre esse projeto em:<%= link_to projeto.url, projeto.url, :target=> :blank %></span>
 </div>		
 <% end %>
 					</div>
