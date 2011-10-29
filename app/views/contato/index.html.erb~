@@ -1,0 +1,31 @@
+    <h2 class="titleContato">Orçamentos, sugestões, dúvidas? Entre já em contato</h2>
+      <div class="boxHorizontal">
+        <%= form_tag '/contato/enviar', :method=> :post,:remote=>true do %>
+          <fieldset>  
+            <p>
+              <label>*Nome:</label>
+              <%= text_field_tag :nome %>
+            </p>
+            <p class="right">
+              <label>*Mensagem:</label>
+              <%= text_area_tag :mensagem %>               
+            </p>            
+            <p>
+              <label>*E-mail ou Contato:</label>
+              <%= email_field_tag :email %>
+            </p>
+            <p>
+              <label>*Como chegou até aqui, google, bing, amigos, redes sociais?</label>
+              <%= text_field_tag :origem %>
+            </p>
+            <p>
+              <label>*Assunto:</label>
+              <%= text_field_tag :assunto %>
+            </p>
+            <div class="enviar">
+            Todos os campos com * (asterisco) são obrigatórios.
+              <%= submit_tag "Enviar", :title=> "Clque aqui para enviar sua mensagem, responderemos o mais rápido possível."%>
+            </div><!-- Fim div enviar-->
+          </fieldset>
+        <% end %>
+      </div><!-- Fim Box Horizontal-->

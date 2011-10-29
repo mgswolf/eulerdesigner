@@ -1,0 +1,55 @@
+<h1 class="barradicas" title="Clique para visualizar algumas dicas para o preencimento deste cadastro" >Dicas para cadastrar esta sessão</h1>
+
+<p class="textodicas">
+   <span class="destaquedicas"> Listar Usuários: </span> Está opção retornará a página de Usuários cadastrados. <br /> <br>
+   <span class="destaquedicas"> Nome: </span> Digite o nome da usuário.<br /> <br>
+  <span class="destaquedicas"> Salvar: </span> Clique para salvar o cadastro.<br /> <br>
+</p>
+<%= form_for([:admin,@user]) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this usuario from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<fieldset class="fieldes">
+  <legend class="legends" >Usuário</legend>
+  <p>
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+    <p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </p>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+
+
+  <br />
+  <p>
+    <%= f.submit %>
+  </p>
+</fieldset>  
+<% end %>
+<p>
+   <a href="/admin/users" class="voltar">Voltar</a>
+</p>
+
+

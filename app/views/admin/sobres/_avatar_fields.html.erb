@@ -1,0 +1,17 @@
+
+    <% if !f.object.new_record? %>
+    <span class="tagimg">Imagem:</span>
+       <div class="editimg">
+        <%= image_tag f.object.imagem.thumb('230x180').url %>
+       </div>
+       <br /> 
+   <label class="removerimg" >
+    <%= link_to_remove_fields "Remover", f %>
+  </label>
+    <% end %>
+
+<li>
+<label>Selecione a imagem:</label>
+<%= f.file_field :imagem %>
+<%= f.hidden_field :retained_imagem %>
+</li>

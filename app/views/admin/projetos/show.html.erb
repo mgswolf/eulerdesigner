@@ -1,0 +1,60 @@
+				<div id="colunaesquerda">
+					<nav>	
+						<ul class="menuesquerdo">
+								<li><a href="/admin/projetos">Início</a></li>
+								<li><%= link_to "Editar", edit_admin_projeto_path(@projeto) %></li>
+
+						</ul>
+					</nav>	
+				</div><!-- Fim div coluna esquerda -->
+				
+				<div id="colunadireita">
+				
+				<h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
+				<p class="textodicas">
+					<span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type  <br /> <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+				
+				<h1 class="titulotexto" >Básico</h1>
+				<p class="textoshow">
+					<span class="destaquedicas"> Título </span><%= @projeto.titulo %><br />
+          <span class="destaquedicas"> Descrição </span><%=raw @projeto.descricao %><br />
+					<span class="destaquedicas"> Cliente </span><%= @projeto.cliente %><br />
+          <span class="destaquedicas"> Ano </span><%= @projeto.ano %><br />
+          <span class="destaquedicas"> Url </span><%= @projeto.url %><br />
+				</p>
+
+				<h1 class="titulotexto" >Slider Home</h1>
+				<p class="textoshow">
+          <span class="destaquedicas"> Capa </span><%= image_tag @projeto.cover.thumb('64x64').url %><br />
+          <span class="destaquedicas"> Descrição Imagem </span><%= @projeto.cover_descricao %><br />
+				</p>
+				<h1 class="titulotexto" >Side cover</h1>
+				<p class="textoshow">
+          <span class="destaquedicas"> Capa </span><%= image_tag @projeto.side_cover.cover.thumb('64x64').url unless @projeto.side_cover.nil? %><br />
+				</p>
+				<h1 class="titulotexto" >Capa Portfolio</h1>
+				<p class="textoshow">
+          <span class="destaquedicas"> Capa </span><%= image_tag @projeto.capa_portfolio.cover.thumb('64x64').url unless @projeto.capa_portfolio.nil? %><br />
+         <span class="destaquedicas"> Descrição Imagem </span><%= @projeto.capa_portfolio.descricao %><br />
+				</p>
+				
+				<h1 class="tituloimg" >Títulos para sessão de imagens</h1>
+				<p class="textoshow">
+          <ul>
+          <% @projeto.projeto_imagems.each do |imagem| %>
+            <li> <%= imagem.imagem_name %> <%= image_tag imagem.imagem.thumb('64x64').url %></li><br />
+          <% end %>
+					</ul>
+				</p>
+					<h1 class="titulotexto" >Profissionais</h1>
+				<p class="textoshow">
+          <% @projeto.profissionals.each do |profissional| %>
+					<span class="destaquedicas"> Nome </span><%= profissional.nome %><br />
+          <span class="destaquedicas"> Url </span><%= profissional.url %><br />
+          <span class="destaquedicas"> Descrição </span><%= profissional.descricao %><br />
+          <hr />
+          <% end %>
+				</p>			
+
+ </div><!-- Fim div coluna Direita -->

@@ -1,0 +1,9 @@
+module SobreHelper
+
+  def projeto_desenvolvimento
+    @projetos = Projeto.desenvolvimento
+    if @projetos.blank?
+      @projetos = Projeto.last
+    end
+  end
+end

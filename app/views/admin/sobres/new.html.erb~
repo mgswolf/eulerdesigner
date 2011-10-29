@@ -1,0 +1,5 @@
+<% content_for :title_bar do %>
+<h2 id="page_title"><%= controller_name.capitalize %> - <%= action_name.capitalize %></h2>
+<% end %>
+
+<%= render 'form'%>

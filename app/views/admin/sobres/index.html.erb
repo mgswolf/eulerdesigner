@@ -1,0 +1,53 @@
+				<div id="colunaesquerda">
+					<nav>	
+						<ul class="menuesquerdo">
+								<li><a href="/admin">Início</a></li>
+								<li><a href="/admin/sobres/new">Novo Cadastro</a></li>
+						</ul>
+					</nav>	
+				</div><!-- Fim div coluna esquerda -->
+				
+				<div id="colunadireita">
+				
+				<h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
+				<p class="textodicas">
+					<span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type  <br /> <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+
+				<h1 class="barraformulario" >
+					Abaixo contém uma tabela com todos os itens cadastrados nesta sessão com opções de visualizar, editar e excluir. Consulte as dicas acima ou o manual de usuário em caso de dúvidas.
+				</h1>
+					
+					<table>
+					  
+						<thead>
+							<tr>
+								<th>Título</th>
+								<th class="data">Modificado em</th>
+								<th class="visualizar">Visualizar</th>
+								<th class="editar">Editar</th>
+								<th class="excluir">Excluir</th>
+							</tr>
+						</thead>
+						
+						<tfoot>
+							<tr>
+								<td colspan="6"></td>
+							</tr>
+						</tfoot>
+						
+						<tbody>
+           <% @sobres.each do |sobre| %>
+							<tr class="<%= cycle("graylight","gray") %>">
+								<td><%= sobre.nome %></td>
+								<td><%= l(sobre.created_at, :format=> :short) %></td>
+								<td><%= link_to "", admin_sobre_path(sobre), :class=>"view" %></td>
+								<td><%= link_to "", edit_admin_sobre_path(sobre), :class=>"edit" %></td>
+								<td><%= link_to "", admin_sobre_path(sobre), :method=> :delete, :class=>"delet" %></td>
+							</tr>
+            <% end %>
+						</tbody>	
+					
+					</table>
+					
+                </div><!-- Fim div coluna Direita -->

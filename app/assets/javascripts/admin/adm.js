@@ -1,0 +1,63 @@
+// Place your application-specific JavaScript functions and classes here
+// This file is automatically included by javascript_include_tag :defaults
+
+//Efeito de Toggle - Dica
+$(document).ready(function(){
+
+   $("h1.barradicas").click(function(){
+		$(".textodicas").toggle("slow,");
+	});
+});
+
+//Efeito Toggle - Show ADM
+$(document).ready(function(){
+
+    $("h1.titulotexto").click(function(){
+		$(this).next(".textoshow").toggle("slow,");
+	});
+
+    $("h1.titulofile").click(function(){
+		$(this).next(".textoshow").toggle("slow,");
+	});
+
+    $("h1.titulovideos").click(function(){
+		$(this).next(".textoshow").toggle("slow,");
+	})
+
+    $("h1.tituloimg").click(function(){
+		$(this).next(".textoshowimg").toggle("slow,");
+	})
+
+    $("h1.titulotable").click(function(){
+		$(this).next(".textoshowtable").toggle("slow,");
+	})
+
+    $("h1.barrabuscas").click(function(){
+		$(this).next(".formbuscas").toggle("slow,");
+	})
+});
+
+//Paginação e Ordenação
+$(function() {
+  $("th a, .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+});
+
+	$(function() {
+		$( ".datepicker" ).datepicker();
+	});
+
+// helpers adicionar e remover campos
+function remove_fields(_1){
+$(_1).prev("input[type=hidden]").val("1");
+$(_1).closest(".fields").hide();
+};
+function add_fields(_2,_3,_4){
+var _5=new Date().getTime();
+var _6=new RegExp("new_"+_3,"g");
+$(_2).parent().before(_4.replace(_6,_5));
+};
+
+

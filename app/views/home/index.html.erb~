@@ -1,0 +1,96 @@
+<%= render 'shared/avatar', :about => about_atual %>
+           <% projetos = ultimos_trabalhos %>     
+      <div class="ultimosTrabalhos">
+        <h2 class="titlesRight">Últimos Trabalhos</h2><!-- Fim titles h2 -->
+            <div id="slider-wrapper">
+              <div id="slider" class="nivoSlider">
+               <% projetos.each do |projeto| %>
+                <%= link_to portfolio_path(projeto), :class=>"contentSlide" do %>
+                  <div class="imgSlide">
+                    <%= image_tag projeto.cover.url %>
+                  </div>
+                  <div class="textoSlide">
+                    <h3><%= projeto.titulo %></h3>
+                    <p>
+                      <%=raw projeto.cover_descricao %>
+                    </p>
+                  </div>  
+               <% end %>
+                 <% end %>
+              </div>
+            </div>                
+      </div><!-- Fim div Ultimos Trabalhos  -->
+      
+      <div class="projetos">
+        <h2 class="titlesLeft">Projetos</h2><!-- Fim titles h2 -->
+        <span>
+            Conheçam alguns dos projetos que trabalho e participo.
+        </span>
+        <ul>
+
+           <% projetos.each do |projeto| %>
+          <li>
+             <%= link_to image_tag(projeto.side_cover.cover.url), portfolio_path(projeto), :title=>"PEGAR UMA DESCRIÇÃO DO PROJETO", :alt=> "PEGAR UMA DESCRIÇAÕ DA IMAGEM"  %>
+          </li>
+          <% end %>
+        </ul>
+        
+      </div><!-- Fim div Projetos  -->
+      
+      <div class="ideiasSolucoes">
+        <h2 class="titlesRight">Ideias e Soluções</h2><!-- Fim titles h2 -->
+        <p>
+        Trabalhamos com desenvolvimento de Sites, Blogs e 
+        Portais os Sites contam com  técnicas de SEO 
+        para otimização e painel administrativo simples 
+        de fácil uso. Lidamos com desenvolvimento de 
+        Aplicações e Sistemas para internet usando 
+        tecnologias como Ajax, Html e Css acompanhado 
+        de uma programação robusta com Ruby on Rails. 
+        Também criamos logo e peças 
+        públicitárias, para maiores informações 
+        entrem em  contato.
+        </p>
+        <h3>Contato</h3>
+            
+          <%= form_tag '/contato/enviar', :class=>"form_contato", :method=> :post,:remote=>true do %>     
+              <fieldset>
+                <div class="left">
+                 <label>*Nome:</label>
+              <%= text_field_tag :nome %>
+                
+                
+                  <label>*E-mail ou outro contato:</label>
+                 <%= email_field_tag :email %>
+                <%= hidden_field_tag :origem =>'' %>
+              
+                  <label>*Assunto:</label>
+                  <%= text_field_tag :assunto %>
+                </div><!-- Fim div left -->
+                <div class="right">
+                  <label>*Mensagem:</label>
+                  <%= text_area_tag :mensagem %>     
+                </div><!-- Fim div Right -->
+                <span>Todos os campos com * (asterisco) são obrigatórios.</span>
+                <%= submit_tag "Enviar", :title=>"Preencha Todos os campos e clique em enviar" %>
+              </fieldset>             
+         <% end %>
+      </div><!-- Fim div  -->
+      
+      <%= render "ultimas_blog" %>
+
+<%= content_for :footer do %>
+<!-- JS Avatar -->
+  <%= javascript_include_tag "jquerytools" %>
+  <%= javascript_include_tag "lateral-eye" %>
+
+
+<!-- JS slide -->
+<!-- <script type="text/javascript" src="scripts/jquery-1.4.3.min.js"></script> -->
+  <%= javascript_include_tag "jquery.nivo.slider.pack" %>
+<script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+</script>
+<% end %>

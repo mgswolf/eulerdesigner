@@ -1,0 +1,39 @@
+<div id="colunaesquerda">
+  <nav>
+    <ul class="menuesquerdo">
+      <li>
+        <a href="/admin/users/new" title="Clique para criar um novo cadastro">Cadastrar Usuário</a>
+      </li>
+    </ul>
+  </nav>
+</div><!-- Fim div coluna esquerda -->
+<div id="colunadireita">
+  <h1 class="barraformulario" > Usuário </h1>
+  <h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
+  <p class="textodicas">
+    <span class="destaquedicas"> Cadastrar Usuário: </span> Esta opção permite cadastrar um novo Usuário.
+    <br />
+    <br />
+    <span class="destaquedicas"> Nome: </span> Referente ao nome do Usuário  cadastrado, listados em ordem alfabética.
+    <br />
+    <br />
+    <span class="destaquedicas"> Login: </span> Referente ao login do Usuário  cadastrado, listados em ordem alfabética.
+    <br />
+    <br />
+    <span class="destaquedicas"> Modificado em: </span> Informa a data e hora da última modificação no cadastro.
+    <br />
+    <br />
+    <span class="destaquedicas"> Visualizar: </span> Esta opção permite visualizar o cadastro realizado.
+    <br />
+    <br />
+    <span class="destaquedicas"> Editar: </span> Esta opção permite editar o cadastro.
+    <br />
+    <br />
+    <span class="destaquedicas"> Excluir: </span> Esta opção exclui o cadastro selecionado.
+    <br />
+    <br />
+  </p>
+  <div id="usuario">
+    <%= render 'usuarios' %>
+  </div>
+</div><!-- Fim div coluna Direita -->

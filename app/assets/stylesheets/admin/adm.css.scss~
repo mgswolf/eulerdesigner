@@ -1,0 +1,632 @@
+/******************** 
+Globais Rest
+*********************/
+*{
+  margin:0;
+  padding:0;
+}
+header, section, footer{
+  display:block;
+}
+fieldset {
+  border:none;
+}
+ul, ol {
+  list-style-type:none;
+}
+a {
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+a img {
+  border:none;
+}
+/***************************** 
+FIM Globais Rest
+*****************************/
+body, body#home {
+  font-family: Arial, Verdana, sans-serife;
+  font: 88% Arial, verdana, sans-serife;
+  text-align: center;
+ 
+}
+html {
+	
+	text-align: left; 
+}
+#pagina {
+  text-align:left;
+  overflow:hidden;
+  width:962px;
+  height: auto;
+  margin:0 auto;
+}
+section#meio{
+	width: 960px;
+	height: auto;
+	clear: both;
+	display: block;
+	float: left;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+	background-color: #eeeeee;
+	margin-bottom: 6px;
+}
+/***************************** 
+Topo
+*****************************/
+header#topopagina{
+	height: 120px;
+}
+ul#menu {
+	width: 960px;
+	margin: 0 0px 0 0;
+	height: 50px;
+	float:left;
+	clear:left;
+	overflow:hidden;
+	font-size:1.1em;
+
+}
+ul#menu li {
+  list-style-type:none;
+  float:left;
+}
+span.textolink{
+	margin: 5px 0 0 0;
+	display: block;
+}
+ul#menu a.inicio,
+ul#menu a.site,
+ul#menu a.sair{
+	float:left;
+	color: #373737;
+	font-size: 1.4em;
+	height: 40px;
+	width: auto;
+	padding: 0 0 0 40px;
+	margin-top: 3px;
+}
+ul#menu a.inicio{
+
+	margin-left: 10px;
+}
+ul#menu a.site{
+
+	margin-left: 105px;
+}
+ul#menu a.sair{
+
+	margin-left: 172px;
+}
+/* */
+ul#menu a.inicio:hover{
+
+	margin-left: 10px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.site:hover{
+
+	margin-left: 105px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.sair:hover{
+
+	margin-left: 172px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.ativo {
+  color:#fff;
+}
+h1#logo{
+	float: left;
+	width: 274px; 
+	height: 105px;
+	padding: 15px 0 0 0;
+
+}
+/***************************** 
+Fim Topo
+*****************************/
+div#usuarioadm{
+	width: 238px;
+	height: 89px;
+	float: right;
+
+}
+span.textousuarioadm,
+span.nomeusuarioadm{
+	width: 151px;
+	height: auto;
+	float: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 2px 0 4px 4px;
+}
+span.logado{
+	width: 151px;
+	height: auto;
+	float: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 6px 0 0px 4px;
+}
+
+span.textousuarioadm{
+	color: #2d2d2d;
+}
+
+span.nomeusuarioadm{
+	color: #a11d21;
+	margin: 0px 0 0px 4px;
+}
+/***************************** 
+Meio
+*****************************/
+div#colunaesquerda{
+	width: 228px;
+	height: auto;
+	float: left;
+}
+div#colunadireita{
+	width: 722px;
+	height: auto;
+	float: left;
+	padding: 5px;
+}
+ul.menuesquerdo{
+
+}
+ul.menuesquerdo li{
+
+	margin: 2px 0 2px 0;
+	height: 37px;
+	width: 228px;
+	
+}
+ul.menuesquerdo li a{
+	color: #fff;
+	padding: 2px 0px 6px 4px;
+	display: block;
+	color: #373737;
+}
+ul.menuesquerdo li a:hover{
+	color: #fff;
+	text-decoration: none;
+	height: 37px;
+}
+ul.menuesquerdo li:hover{
+	color: #fff;
+
+	display: block;
+	text-decoration: none;
+	height: 37px;
+}
+ul li.boxes {
+	width: 212px;
+	height: 212px;
+
+	padding: 2px;
+	float: left;
+	margin: 11px;
+}
+ul li.boxes  a{
+	width: 212px;
+	height: 212px;
+	display: block;
+	color: #2d2d2d;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+div.icone1{
+	width: 126px;
+	height: 145px;
+
+	display: block;
+	margin: 0 auto;
+}
+div.icone2{
+	width: 103px;
+	height: 138px;
+
+	display: block;
+	margin: 0 auto;
+}
+
+/********************************************************************** Copiar abaixo e subistituir *************************************************/
+h1.barradicas,
+h1.barraformulario,
+h1.titulotexto,
+h1.tituloimg,
+h1.titulofile,
+h1.titulovideos{
+	width: auto;
+	height: auto;
+	font-size: 1.0em;
+	border: 1px solid gray;
+	padding: 8px 5px 8px 32px;
+	color: #373737;
+	cursor: pointer;
+	margin: 5px 0 10px 0;
+}
+p.textodicas,
+p.textoshow{
+	width: auto;
+	height: auto;
+	background: ;
+	font-size: 1.0em;
+	border: 1px solid gray;
+	margin: 5px 0 10px 0;
+	padding: 5px;
+	color: #373737;
+	display: table;
+	text-align: left;
+	text-align: justify;
+
+	
+}
+h1.barradicas{
+
+}
+h1.barradicas:hover{
+
+}
+h1.barraformulario{
+
+	
+}
+h1.barraformulario:hover{
+
+}
+h1.titulotexto{
+
+}
+h1.titulotexto:hover{
+
+}
+h1.tituloimg{
+
+}
+h1.tituloimg:hover{
+	background:url("../imagens/pimghover.png") 2px 2px no-repeat;
+}
+h1.titulofile{
+	background:url("../imagens/pfile.png") 2px 2px no-repeat;
+}
+h1.titulofile:hover{
+	background:url("../imagens/pfilehover.png") 2px 2px no-repeat;
+}
+h1.titulovideos{
+	background:url("../imagens/pvideo.png") 2px 2px no-repeat;
+}
+h1.titulovideos:hover{
+	background:url("../imagens/pvideohover.png") 2px 2px no-repeat;
+}
+p.textoshow img{
+	border: 1px solid #373737;
+	border-style: dashed;
+	float: left;
+	margin: 4px;
+	position: relative;
+}
+/********************************************************************** Copiar acima *************************************************/
+
+
+/***************************** 
+Fim Meio
+*****************************/
+/***************************** 
+Formularios 
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+*****************************/
+form{
+	display: block; 
+}
+form p{
+	margin: 10px 0 0 0; 
+}
+div#colunadireita span.destaquedicas{
+	color: #a11d21;
+	font-weight: bold;
+}
+div#colunadireita table{
+	width: 700px;
+	height: auto;
+	display: table;
+	margin: 0 0 0 10px;
+}
+div#colunadireita table thead tr th,
+div#colunadireita table tfoot tr td{
+	width: auto;
+	height: auto;
+	background-color: #a11d21;
+	color: #fff;
+	padding: 2px;
+}
+div#colunadireita table tbody tr.gray td{
+	background-color: #4c4c4c;
+	color: #fff;
+	padding: 2px;
+	
+}
+div#colunadireita table tbody tr.graylight td{
+	background-color: #6c6c6c;
+	color: #fff;
+	padding: 2px;
+}
+div#colunadireita table thead tr th.visualizar{
+	width: 70px;
+}
+div#colunadireita table thead tr th.editar{
+	width: 40px;
+
+}
+div#colunadireita table thead tr th.excluir{
+	width: 40px;
+}
+div#colunadireita table thead tr th.data{
+	width: 105px;
+}
+
+div#colunadireita table tbody tr td a.view,
+div#colunadireita table tbody tr td a.edit,
+div#colunadireita table tbody tr td a.delet{
+	width: 32px;
+	height: 32px;
+	display: block;
+}
+
+div#colunadireita table tbody tr td a.view{
+	background:url("../imagens/view.png") left top no-repeat;
+	margin: 0 0 0 20px;
+}
+div#colunadireita table tbody tr td a.edit{
+	background:url("../imagens/editar.png") left top no-repeat;
+	margin: 0 0 0 5px;
+}
+
+div#colunadireita table tbody tr td a.delet{
+	background:url("../imagens/delet.png") left top no-repeat;
+	margin: 0 0 0 8px;
+}
+
+
+
+form input, form select.selectoptions{
+	margin: 0 0 10px 0;
+	border: 1px solid #c0c0c0;
+	height: 26px;
+	color: #373737;
+	background:url("../imagens/bginputs.png");
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+form textarea{
+	width: 655px;
+	height: 120px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #c0c0c0;
+	background:url("../imagens/bgtextarea.png");
+}
+
+form select.selectoptions{	
+	width: 150px;
+}
+
+form ul li input{
+	margin: 5px 7px 5px 7px;
+	height: 10px;
+}
+fieldset.fieldes{
+	border: 1px solid gray;
+	margin: 10px;
+	padding: 5px;
+}
+legend.legends{
+	padding: 2px;
+	margin: 0 0 0 6px; 
+	color: #fff;
+	background: #a11d21;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+label.labels{
+	color: #373737;
+	font-weight: bold;
+	margin-bottom:5px; 
+	display: block; 
+	font-weight: bold;
+	width: 320px;
+}
+form p{
+	height: auto;
+	width: 320px;
+	display: inline-block;a
+	float: none;
+}
+form ul li{
+	height: auto;
+	width: auto;
+	display: inline-block;
+	float: none;
+}
+
+form input.ok, 
+form input.cadastrar,
+form input.voltar,
+form input.enviar{
+	width: 68px;
+	height: 26px;
+	background:url("../imagens/bgbuttom.png") no-repeat;
+	cursor: pointer;
+	border: none;
+	padding: 0 0 6px 0;
+	margin: 10px 0 0 0;
+}
+form input.ok:hover, 
+form input.cadastrar:hover,
+form input.voltar:hover,
+form input.enviar:hover{
+	background:url("../imagens/bgbuttomhover.png") no-repeat;
+	color: #fff;
+}
+form input.voltar{
+	background:url("../imagens/bgbuttomvoltar.png") no-repeat;
+	padding: 0 0 6px 8px;
+}
+form input.voltar:hover{
+	background:url("../imagens/bgbuttomvoltarhover.png") no-repeat;
+	padding: 0 0 6px 8px;
+}
+form input.voltar:visited{
+	color: normal;
+}
+/***************************** 
+FIM Formularios
+*****************************/
+#rodape {
+	width: 100%;
+	height: 48px;
+	clear: both;
+}
+div#logoror{
+	width: 210px;
+	height: 42px;
+	float: right;
+	background:url("../imagens/copyright.png") no-repeat;	
+}
+ul#menurodape {
+	width: 750px;
+	margin: 0 0px 0 0;
+	height: 50px;
+	float:left;
+	clear:left;
+	overflow:hidden;
+	font-size:1.1em;
+}
+ul#menurodape li {
+  list-style-type:none;
+  float:left;
+  color: #fff;
+}
+ul#menurodape a {
+  float:left;
+  color: #fff;
+  margin: 0 8px 0 8px;
+  height: 24px;
+  padding: 4px 0 0 0;
+}
+ul#menurodape a.ativo {
+  color:#fff;
+}
+ul#menurodape a:hover {
+  background-color: #6a0e11;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+div#conteudorodape{
+	width: 960px;
+	height: auto;
+	text-align:left;
+	overflow:hidden;
+	margin:0 auto;
+}
+/**********************************************************************************************************************************************/
+div.login{
+	width: 232px;
+	height: 275px;
+	display: block;
+	margin: 5% 0 5% 35%;
+	padding: 5px;
+	border: 1px solid gray;
+}
+div.login form{
+	margin: 25px 0 0 0;
+	padding: 4px;
+	border: 1px solid gray;	
+}
+div.login form p{
+	margin: 0 ;
+}
+
+div.login form p input{
+	width: 218px;
+}
+div.login  form input.enviar{
+	float: right;
+}
+div.login ul.ullogin li{
+	float: left;
+	margin: 2px;
+	display: block;
+}
+div.login ul.ullogin li a{
+	color: gray;
+}
+div.login ul.ullembrarme{
+	display: table;
+	margin: -43px 0 0 0;
+}
+
+div.icologin{
+	width: 70px;
+	height: 70px;
+	background-image: url("../imagens/logar.png");
+	float: left;
+	border: 1px solid #fff;
+	margin: 0 20px 0 0;
+}
+h1.titlelogar{
+	padding: 15px 0 0 0;
+	color: gray;
+}
+h1.esqueceusenha{
+	padding: 15px 0 0 0;
+	color: gray;
+	font-size: 1.1em;
+}
+class.opcoes{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

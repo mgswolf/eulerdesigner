@@ -1,0 +1,112 @@
+// Place all the styles related to the contato controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/******************* Inicio Pagina Contato *******************/
+    .contentMeioPagina .boxHorizontal{
+      width: 938px;
+      height: auto;
+      display: block;
+      float: left;
+      overflow: hidden;
+      padding: 15px;
+      background: url("gradeBg.png");
+    }
+      .contentMeioPagina h2.titleContato{
+        width: 470px;
+        height: 23px;
+        float: left;
+        background: url("bgBoxs.png")  -308px -1738px no-repeat;
+        color: #ffffff;
+        font-size: 13pt;
+        padding: 2px 0 0 4px;
+        margin: 0 0 2px 0;
+        font-weight: normal;
+      }
+      .contentMeioPagina .boxHorizontal form{
+        width: 908px;
+        height: auto;
+        display: block;
+        float: left;
+        padding: 15px;
+        background: url("Texturebg.png");
+        font-family:  Arial, Verdana, sans-serife;        
+      }
+      .contentMeioPagina .boxHorizontal form fieldset{
+        width: auto;
+        height: auto;
+        display: block;
+        float: left;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset p{
+        width: 454px;
+        height: auto;
+        display: block;
+        float: left;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset p.right{
+        float: right;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset p label{
+        width: 454px;
+        height: auto;
+        display: block;
+        color: #ffffff;
+        font-size: 13pt;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset p input{
+        width: 443px;
+        height: 28px;
+        margin: 0 0 10px 0;
+        display: block;
+        color: #de3612;
+        font-size: 13pt;
+        background: url("gradeBg.png");
+        border: none;
+        padding: 2px;
+      }
+
+      .contentMeioPagina .boxHorizontal form fieldset p textarea{
+        width: 443px;
+        height: 215px;        
+        font-family:  Arial, Verdana, sans-serife;
+        margin: 0 0 0 7px;
+        display: block;
+        color: #de3612;
+        font-size: 13pt;
+        background: url("gradeBg.png");
+        border: none;
+        padding: 2px;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset p textarea:focus,
+      .contentMeioPagina .boxHorizontal form fieldset p input:focus{
+        background: #f7ebfa;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset div.enviar{
+        width: 908px;
+        height: 30px;
+        margin: 5px 0 0 0;
+        display: block;
+        float: left;
+        text-align: left;
+        font-size: 14pt;
+        color: #ffffff;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset div.enviar input{
+        width: 110px;
+        height: 30px;
+        *margin-top: -20px;
+        display: block;
+        background: url("gradeBg.png");
+        float: right;
+        border: none;
+        text-align: center;
+        color: #de3612;
+        font-size: 13pt;
+        cursor: pointer;
+      }
+      .contentMeioPagina .boxHorizontal form fieldset div.enviar input:hover{
+        color: #FFFFFF;
+        background: #de3612; 
+      }
+
+/******************* Fim Pagina Contato *******************/

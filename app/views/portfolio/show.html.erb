@@ -1,0 +1,71 @@
+<ul class="menuPortfolio">
+				<li><a href="/portfolio" title="Veja todos os trabalhos">Todos os trabalhos</a></li> <!-- Class VISITED indica em que página o user está -->
+				<li><%= link_to "Sites", '/portfolio/sites', :title=>"Veja todos os projetos de sites, layouts, html, programção e css" %></li>
+				<li><%= link_to "Logotipos",  '/portfolio/logotipos', :title=>"Confira todos os trabalhos na criação de identidades visuais" %></li>
+				<li><%= link_to "Impressos", '/portfolio/impressos', :title=>"Confira todos os trabalhos impressos, como banners, cartões de visita, cartazes, folders e flayesr" %></li>
+				<li><a href="/portfolio/outros" title="Veja aqui outros trabalhos também relacionados com criações gráficas">Outros</a></li>
+				<li><a href="/" class="voltar" title="Voltar para a pagina anterior">Voltar</a></li>
+			</ul><!-- Fim Menu Portfolio -->
+			<div class="smallColl">
+				<h2 class="titleSmallColl">Ficha Técnica</h2>
+				<div class="contentSmallColl">
+					<span>Cliente:</span>
+					<p>
+					<%= @projeto.cliente %>
+					</p>
+					<span>Sobre o Projeto:</span>
+					<p>
+					<%=raw @projeto.descricao %>
+					</p>
+					<span>Tecnologias Usadas:</span>
+					<p>
+					<%=raw @projeto.tecnologia %>
+					</p>
+					<span>Envolvidos no Job:</span>
+					<p>
+           <% @projeto.profissionals.each do |profissional| %>
+           <%= link_to profissional.nome, profissional.url, :target=> :blank, :title=>"Acesse o site de "+profissional.nome %> : <%= profissional.descricao %>
+          <% end %>
+					</p>
+					<span>Ano:</span>
+					<p>
+					<%= @projeto.ano %>
+					</p>
+					<span>Endereço:</span>
+					<p>
+					<%= link_to @projeto.url, @projeto.url, :target=> :blank, :title=>"Acesse o site "+@projeto.titulo %> - está <%= @projeto.status %>.
+					</p>
+				</div><!-- Fim div content small Coll -->			
+			</div><!-- Fim div smallColl -->
+			<div class="greatColl">
+				<h2 class="titleGreatColl">Titulo Great Coll</h2>
+				<div class="contentGreatColl">
+					
+					<!--- O JS GERA ISSO AUTOMATICO 
+					<ul class="galleryimagelist">
+						<li><a href="javascript:void(0);"><<</a></li>  
+						<li class=""><a href="javascript:void(0);">1</a></li> 
+						<li class=""><a href="javascript:void(0);">2</a></li> 
+						<li class=""><a href="javascript:void(0);">3</a></li> 
+						<li class=""><a href="javascript:void(0);">4</a></li> 
+						<li class=""><a href="javascript:void(0);">5</a></li> 
+						<li class=""><a href="javascript:void(0);">6</a></li> 
+						<li class=""><a href="javascript:void(0);">7</a></li>
+						<li><a href="javascript:void(0);">>></a></li>
+					</ul>
+					DE ACORDO COM QUE FOR INSERINO O LI DO UL.GALLERYIMAGES A LISTA ACIMA É GERADA -->
+					
+					<ul class="galleryimages">
+           <% @projeto.projeto_imagems.each do |img| %>
+						<li style="display: none;"><%= image_tag img.imagem.url %><%= img.caption %></li>
+            <% end %>  
+						
+					</ul>
+		
+				
+				</div><!-- Fim div contentGreatColl -->
+			</div><!-- Fim div greatColl -->
+
+<%= content_for :footer do %>
+<%= javascript_include_tag 'simplegallery' %>
+<% end %>

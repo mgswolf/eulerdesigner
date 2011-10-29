@@ -1,0 +1,488 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+/******************* Inicio index *******************/  
+  h2.titlesLeft{
+    width: auto;
+      height: 25px;
+    display: block;
+    color: #ffffff;
+    font-size: 13pt;
+    margin: 3px 0 0 4px;
+    font-weight: normal;
+  }
+  h2.titlesRight{
+    width: Auto;
+    height: 25px;
+    display: block;
+    color: #ffffff;
+    font-size: 13pt;
+    margin: 3px 0 0 25px;
+    font-weight: normal;
+  }
+    .contentMeioPagina .eulerDesign{
+      width: 294px;
+      height: 418px;
+      float: left;
+      margin: 0 12px 15px 0;
+      background-color:  #FFFFFF;
+      background: url("bgBoxs.png") -322px -1007px no-repeat;
+    }
+      .contentMeioPagina .eulerDesign ul.avatar{
+        width: 117px;
+        height: 353px;
+        float: left;
+        display: block;
+        margin: 15px 0 0 15px;
+      }
+      .conectese{
+        width: 132px;
+        height: 353px;
+        float: left;
+        display: block;
+        margin: 15px 0 0 7px;
+      }
+        .conectese span{
+          width: auto;
+          height: 25px;
+          display: block;
+          color: #ffffff;
+          font-size: 13pt;
+          margin: 1px 0 0 2px;
+        }
+        .conectese nav ul{
+          width: 132px;
+          height: 325px;
+          float: left;
+          display: block;
+        }
+          .conectese nav ul li{
+            width: 132px;
+            height: 24px;
+            display: block;
+            margin: 0px 0 12px 0;
+            font-size: 13pt;  
+          }
+            .conectese nav ul li a{
+              color: #de3612;
+            }
+            .conectese nav ul li a:hover{
+              background: #de3612;
+              color: #ffffff;
+              text-decoration: none;
+            }
+              .conectese nav ul li a img{
+              width: 24px;
+              height: 24px;
+              color: #de3612;
+              overflow: hidden;
+              margin: 0 3px 0 0;
+              float: left;
+              }
+    .contentMeioPagina .ultimosTrabalhos{
+      width: 662px;
+      height: 418px;
+      float: left;
+      margin: 0 0 15px 0;
+      background-color:  #FFFFFF;
+      background: url("bgBoxs.png")  -303px -126px no-repeat;
+      overflow: hidden;
+    }
+      #slider-wrapper #slider a.contentSlide{
+        display: block;
+        float: left;
+        width:608px;
+        height:352px;
+        cursor: pointer;
+        position: relative;
+        z-index: 100;
+      }
+        #slider-wrapper #slider a.contentSlide:hover{
+          text-decoration: none;
+          position: relative;
+          z-index: 100;
+        }
+      #slider-wrapper #slider a.contentSlide div.imgSlide{
+        width:608px;
+        height:260px;
+        float: left;
+      }
+      #slider-wrapper #slider a.contentSlide div.textoSlide{
+        width:608px;
+        height:92px;
+        float: left;
+      }
+      #slider-wrapper #slider a.contentSlide h3{
+        width:608px;
+        height:25px;
+        float: left;
+        margin: 2px 0 0 0;
+        color: #de3612;
+        overflow: hidden;
+      }
+      #slider-wrapper #slider a.contentSlide p{
+        width:608px;
+        height: 60px;
+        float: left;
+        text-align: justify;
+        font-size: 13pt;
+        color: #0f0f0f;
+        overflow: hidden;
+      }
+
+/********************************* Inicio CSS Slider ****************************************************/
+      /* The Nivo Slider styles */
+      .nivoSlider {
+        position:relative;
+      }
+      .nivo-slice {
+        display:block;
+        position:absolute;
+        z-index:50;
+        height:100%;
+      }
+      /* Direction nav styles (e.g. Next & Prev) */
+      .nivo-directionNav a {
+        position:absolute;
+        top:45%;
+        z-index:200;
+        cursor:pointer;
+      }
+      .nivo-prevNav {
+        left:0px;
+      }
+      .nivo-nextNav {
+        right:0px;
+      }
+      /* Control nav styles (e.g. 1,2,3...) */
+      .nivo-controlNav a {
+        position:relative;
+        z-index:200;
+        cursor:pointer;
+      }
+      .nivo-controlNav a.active {
+        font-weight:bold;
+      }
+      /**************02*******************/
+      #slider-wrapper {
+        width:608px;
+        height:352px;
+        margin: 15px 0 0 35px;
+        padding: 0 0 0 0;
+        background: #ffffff;
+      }
+      #slider {
+        position:relative;
+        width:608px;
+        height:352px;
+        background:url('loading.gif') no-repeat 50% 50%;
+      }
+      #slider img {
+        position:absolute;
+        top:0px;
+        left:0px;
+        display:none;
+        width:608px;
+        height:260px;
+      }
+      .nivo-controlNav {
+        position:absolute;
+        margin: 0 0 0 500px;
+      }
+      .nivo-controlNav a {
+        display:block;
+        width:22px;
+        height:22px;
+        background:url('bullets.png') no-repeat;
+        text-indent:-9999px;
+        border:0;
+        margin-right:3px;
+        float:left;
+      }
+      .nivo-controlNav a.active {
+        background-position:0 -22px;
+      }
+      .nivo-directionNav a {
+        display:block;
+        width:30px;
+        height:30px;
+        background:url('arrows.png') no-repeat;
+        text-indent:-9999px;
+        border:0;
+      }
+      a.nivo-nextNav {
+        background-position:-30px 0;
+        right:5px;
+      }
+      a.nivo-prevNav {
+        left:5px;
+      }
+      .nivo-caption {
+        text-shadow:none;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      .clear {
+        clear:both;
+      }
+/********************************* Fim CSS Slider ****************************************************/
+    .contentMeioPagina .projetos{
+      width: 294px;
+      height: 460px;
+      float: left;
+      margin: 0 12px 15px 0;
+      background-color:  #FFFFFF;
+      background: url("bgBoxs.png") -655px -1006px no-repeat;
+      }
+      .projetos span{
+        width:255px;
+        height: 50px;
+        float: left;
+        margin: 15px 0 0 15px;
+        text-align: justify;
+        font-size: 13pt;
+        color: #0f0f0f;
+        overflow: hidden;
+      }
+      .projetos ul{
+        width:255px;
+        height: 355px;
+        margin: 0px 0 0 15px;
+        display: block;
+        float: left;
+      }
+      .projetos ul li{
+        width:255px;
+        height: 62px;
+        border: 1px solid #0f0f0f;
+        margin: 5px 0 5px 0;
+      }
+      .projetos ul li:hover{
+        border: 1px solid #de3612;
+      }
+      .projetos ul li a{
+        width:255px;
+        height: 62px;
+        display: block; 
+        color: #0f0f0f;
+      }
+      .projetos ul li a:hover{
+        text-decoration: none;
+      }
+      .projetos ul li a img{
+        border: none;
+      }
+    .contentMeioPagina .ideiasSolucoes{
+      width: 662px;
+      height: 460px;
+      float: left;
+      background-color:  #FFFFFF;
+      background: url("bgBoxs.png") -303px -546px no-repeat;
+    }
+      .ideiasSolucoes h3{
+        width: auto;
+        height: 25px;
+        float: left;
+        display: block;
+        color: #ffffff;
+        font-size: 13pt;
+        margin: 8px 0 0 40px;
+        font-weight: normal;
+      }
+      .ideiasSolucoes p{
+        width:608px;
+        height: 120px;
+        display: block;
+        float: left;
+        margin: 10px 0 0 35px;
+        text-align: justify;
+        font-size: 13pt;
+        color: #0f0f0f;
+        overflow: hidden;
+      }
+      .ideiasSolucoes form{
+        width: 588px;
+        height: 222px;
+        margin: 5px 0 0 35px;
+        padding: 10px;
+        display: block;
+        overflow: hidden;
+        font-family:  Arial, Verdana, sans-serife;
+        float: left;
+        background: #7c019a url("Texturebg.png") 
+      }
+      .ideiasSolucoes form fieldset{
+        width: 588px;
+        height: 222px;
+        display: block;
+        float: left;
+      }
+      .ideiasSolucoes form fieldset div.left{
+        width: 285px;
+        height: 184px;
+        float: left;
+      }
+      .ideiasSolucoes form fieldset div.right{
+        width: 285px;
+        height: 184px;
+        float: right;
+      }
+      .ideiasSolucoes form fieldset label{
+        width: 285px;
+        height: 18px;
+        font-size: 13pt;
+        color: #ffffff;
+      }
+      .ideiasSolucoes form fieldset input{
+        width: 283px;
+        height: 30px;
+        color: #de3612;
+        margin: 0 0 12px 0;
+        border: 1px solid #ffffff;
+        background: #ffffff url("gradeBg.png");
+      }
+      .ideiasSolucoes form fieldset input.enviar{
+        width: 110px;
+        height: 28px;
+        display: block;
+        cursor: pointer;
+        font-size: 14pt;
+        background: #ffffff;
+        border: 0px solid #ffffff;
+        margin: 8px 0 0 0;
+        float: right;
+        background: #ffffff url("gradeBg.png");
+      }
+      .ideiasSolucoes form fieldset input.enviar:hover{
+        background: #de3612;
+        color: #ffffff;
+      }
+      .ideiasSolucoes form fieldset textarea{
+        width: 279px;
+        height: 158px;
+        font-family:  Arial, Verdana, sans-serife;
+        font-size: 11pt;
+        color: #de3612;
+        border: 1px solid #ffffff;
+        padding: 2px;
+        background: #ffffff url("gradeBg.png");
+      }
+      .ideiasSolucoes form fieldset input:focus,
+      .ideiasSolucoes form fieldset textarea:focus{
+        background: #f7ebfa; 
+      }
+      .ideiasSolucoes form fieldset span{
+        width: auto;
+        height: auto;
+        margin: 12px 0 0 0;
+        float: left;
+        font-size: 11pt;
+        color: #ffffff;
+      }
+    .contentMeioPagina .ultimasBlog{
+      width: 967px;
+      height: 266px;
+      float: left;
+      overflow: hidden;
+      background-color:  #FFFFFF;
+      background: url("bgBoxs.png") -0px -1469px no-repeat;
+    }
+      .ultimasBlog .ultimaPostagem{
+        width: 651px;
+        height: 200px;
+        float: left;
+        margin: 10px 0 0 15px;
+      }
+      .ultimasBlog .ultimaPostagem a{
+        width: auto;
+        height: auto;
+        display: block;
+        color: #0f0f0f;
+        float: left;
+        display: block;
+        cursor: pointer;
+      }
+      .ultimasBlog .ultimaPostagem a:hover{
+        background: #f7ebfa;
+        text-decoration: none;
+      }
+      .ultimasBlog .ultimaPostagem span.vejaMais {
+        width: 50px;
+        height: 10px;
+        float: right;
+        color: #de3612;
+      }
+      .ultimasBlog .ultimaPostagem .capaPost,
+      .ultimasBlog .ultimaPostagem .capaPost img{
+        width: 200px;
+        height: 200px;
+        float: left;
+      }
+      .ultimasBlog .ultimaPostagem .previaPost{
+        width: 425px;
+        height: 170px;
+        float: left;
+        margin: 0 0 0 15px;
+      }
+      .ultimasBlog .ultimaPostagem .previaPost h3{
+        width: 425px;
+        height: 40px;
+        display: block;
+        float: left;
+        color: #de3612;
+        margin: 0 0 10px 0;
+      }
+      .ultimasBlog .ultimaPostagem .previaPost p{
+        width: 425px;
+        height: 120px;
+        display: block;
+        float: left;
+        color: #0f0f0f;
+        text-align: justify;
+        font-size: 13pt;
+        overflow: hidden;
+      }
+      .ultimasBlog .maisLidas{
+        width: 262px;
+        height: 200px;
+        float: left;
+        margin: 15px 0 0 17px;
+      }
+      .ultimasBlog .maisLidas h3{
+        width: 258px;
+        height: 24px;
+        display: block;
+        font-size: 13pt;
+        font-weight: normal;
+        color: #ffffff;
+        float: left;
+        padding: 1px 0 0 4px;
+      }
+      .ultimasBlog .maisLidas ul{
+        width: 262px;
+        height: 171px;
+        float: left;
+        padding: 2px 0 0 0;
+      }
+      .ultimasBlog .maisLidas ul li{
+        width: 262px;
+        height: 40px;
+        float: left;
+        font-size: 13pt;
+        overflow: hidden;
+        margin: 0 0 20px 0;
+      }
+      .ultimasBlog .maisLidas ul li a{
+        width: 262px;
+        height: 40px;
+        display: block;
+        overflow: hidden;
+        color: #7c019a;
+        float: left;
+
+      }
+      .ultimasBlog .maisLidas ul li a:hover{
+        color: #ffffff;
+        text-decoration: none;
+        background: #de3612;
+      }
+/******************* Fim index ***************************/

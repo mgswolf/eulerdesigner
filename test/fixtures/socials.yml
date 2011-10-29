@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sobre: 
+  nome: MyString
+  title: MyString
+  imagem_uid: MyString
+  imagem_name: MyString
+
+two:
+  sobre: 
+  nome: MyString
+  title: MyString
+  imagem_uid: MyString
+  imagem_name: MyString

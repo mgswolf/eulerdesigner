@@ -1,0 +1,18 @@
+      <div class="eulerDesign">
+        <h2 class="titlesLeft">@EulerDesign</h2><!-- Fim titles h2 -->
+        <ul class="avatar">
+          <li>
+            <%= image_tag "system/EulerDesign_c.png", :alt=>"EulerDesign", :class=>"eye", :rel=>"EulerDesign", :width=>"117", :height=>"353"%>
+          </li>
+        </ul>
+        <div class="conectese">
+          <span>Conecte-se</span><!-- Fim titles h2 -->
+          <nav>
+            <ul>
+             <% about.socials.each do |social| %>
+              <li><%= link_to social.url, :title=>"Siga-me no twitter e acompanhe tudo que eu falo e comento sobre tecnologia" do %><%= image_tag social.imagem.url, :alt=>"icone twitter"%><%= social.nome %><% end %></li>
+             <% end %>
+            </ul>
+          </nav>
+        </div><!-- Fim div Conectese -->
+      </div><!-- Fim div Euler Design -->

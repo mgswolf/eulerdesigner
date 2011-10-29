@@ -1,0 +1,4 @@
+				<ul>
+					<li class="boxes"><%= link_to "/admin/sobres" do %><div class="icone1">Sobre</div><% end %></li>
+
+				</ul>

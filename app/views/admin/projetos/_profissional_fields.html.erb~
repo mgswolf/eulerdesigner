@@ -1,0 +1,5 @@
+<div class="fields">
+<%= f.text_field :nome %>
+<%= f.url_field :url %>
+<%= f.text_area :descricao %>
+</div>

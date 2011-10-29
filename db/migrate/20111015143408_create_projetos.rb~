@@ -1,0 +1,21 @@
+class CreateProjetos < ActiveRecord::Migration
+  def change
+    create_table :projetos do |t|
+      t.string :titulo
+      t.string :cached_slug
+      t.string :categoria
+      t.string :cliente
+      t.text :descricao
+      t.text :tecnologia
+      t.string :ano
+      t.string :url
+      t.string :status
+      t.string :cover_uid
+      t.string :cover_name
+      t.text :cover_descricao
+
+      t.timestamps
+    end
+  end
+end
+

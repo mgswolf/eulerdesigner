@@ -1,0 +1,456 @@
+/******************** 
+Globais Rest
+*********************/
+*{
+  margin:0;
+  padding:0;
+}
+header, section, footer{
+  display:block;
+}
+fieldset {
+  border:none;
+}
+ul, ol {
+  list-style-type:none;
+}
+a {
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+a img {
+  border:none;
+}
+/***************************** 
+FIM Globais Rest
+*****************************/
+body, body#home {
+  font-family: Arial, Verdana, sans-serife;
+  font: 88% Arial, verdana, sans-serife;
+  text-align: center;
+  background-image: url("/assets/adm/bgtopo.jpg") repeat-x;
+}
+html {
+	background:url("/assets/adm/bgfooter.jpg") #eeeeee left bottom repeat-x;
+	text-align: left; 
+}
+#pagina {
+  text-align:left;
+  overflow:hidden;
+  width:962px;
+  height: auto;
+  margin:0 auto;
+}
+section#meio{
+	width: 960px;
+	height: auto;
+	clear: both;
+	display: block;
+	float: left;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+	background-color: #eeeeee;
+	margin-bottom: 6px;
+}
+/***************************** 
+Topo
+*****************************/
+header#topopagina{
+	height: 120px;
+}
+ul#menu {
+	width: 960px;
+	margin: 0 0px 0 0;
+	height: 50px;
+	float:left;
+	clear:left;
+	overflow:hidden;
+	font-size:1.1em;
+	background:url("/assets/adm/bgmenuhorizontal.png") no-repeat;
+}
+ul#menu li {
+  list-style-type:none;
+  float:left;
+}
+span.textolink{
+	margin: 5px 0 0 0;
+	display: block;
+}
+ul#menu a.inicio,
+ul#menu a.site,
+ul#menu a.sair{
+	float:left;
+	color: #373737;
+	font-size: 1.4em;
+	height: 40px;
+	width: auto;
+	padding: 0 0 0 40px;
+	margin-top: 3px;
+}
+ul#menu a.inicio{
+	background:url("/assets/adm/icomenuhorizontal.png") left top no-repeat;
+	margin-left: 10px;
+}
+ul#menu a.site{
+	background:url("/assets/adm/icomenuhorizontal.png") left -40px no-repeat;
+	margin-left: 105px;
+}
+ul#menu a.sair{
+	background:url("/assets/adm/icomenuhorizontal.png") left -80px no-repeat;
+	margin-left: 172px;
+}
+/* */
+ul#menu a.inicio:hover{
+	background:url("/assets/adm/icomenuhorizontal.png") left -117px no-repeat;
+	margin-left: 10px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.site:hover{
+	background:url("/assets/adm/icomenuhorizontal.png") left -157px no-repeat;
+	margin-left: 105px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.sair:hover{
+	background:url("/assets/adm/icomenuhorizontal.png") left -197px no-repeat;
+	margin-left: 172px;
+	text-decoration: none;
+	color: #c0c0c0;
+}
+ul#menu a.ativo {
+  color:#fff;
+}
+h1#logo{
+	float: left;
+	width: 274px; 
+	height: 105px;
+	padding: 15px 0 0 0;
+	background:url("/assets/adm/bgluzlogol.png")no-repeat;
+}
+/***************************** 
+Fim Topo
+*****************************/
+div#usuarioadm{
+	width: 238px;
+	height: 89px;
+	float: right;
+	background:url("/assets/adm/logadocomol.jpg");
+}
+span.textousuarioadm,
+span.nomeusuarioadm{
+	width: 151px;
+	height: auto;
+	float: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 2px 0 4px 4px;
+}
+span.logado{
+	width: 151px;
+	height: auto;
+	float: left;
+	font-size: 0.8em;
+	font-weight: bold;
+	margin: 6px 0 0px 4px;
+}
+
+span.textousuarioadm{
+	color: #2d2d2d;
+}
+
+span.nomeusuarioadm{
+	color: #a11d21;
+	margin: 0px 0 0px 4px;
+}
+/***************************** 
+Meio
+*****************************/
+div#colunaesquerda{
+	width: 228px;
+	height: auto;
+	float: left;
+}
+div#colunadireita{
+	width: 722px;
+	height: auto;
+	float: left;
+	padding: 5px;
+}
+ul.menuesquerdo{
+
+}
+ul.menuesquerdo li{
+	background:url("/assets/adm/bgmenuesquerdo.png") left center no-repeat;
+	margin: 2px 0 2px 0;
+	height: 37px;
+	width: 228px;
+	
+}
+ul.menuesquerdo li a{
+	color: #fff;
+	padding: 2px 0px 6px 4px;
+	display: block;
+	color: #373737;
+}
+ul.menuesquerdo li a:hover{
+	color: #fff;
+	text-decoration: none;
+	height: 37px;
+}
+ul.menuesquerdo li:hover{
+	color: #fff;
+	background:url("/assets/adm/bgmenuesquerdohover.png") left center no-repeat;	
+	display: block;
+	text-decoration: none;
+	height: 37px;
+}
+ul li.boxes {
+	width: 212px;
+	height: 212px;
+	background:url("/assets/adm/bgboxes.png") no-repeat;
+	padding: 2px;
+	float: left;
+	margin: 11px;
+}
+ul li.boxes  a{
+	width: 212px;
+	height: 212px;
+	display: block;
+	color: #2d2d2d;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+div.icone1{
+	width: 126px;
+	height: 145px;
+	background:url("/assets/adm/icone1.png") left bottom no-repeat;
+	display: block;
+	margin: 0 auto;
+}
+div.icone2{
+	width: 103px;
+	height: 138px;
+	background:url("/assets/adm/icone2.png") left bottom no-repeat;
+	display: block;
+	margin: 0 auto;
+}
+
+/********************************************************************** Copiar abaixo e subistituir *************************************************/
+h1.barradicas,
+h1.barraformulario,
+h1.titulotexto,
+h1.tituloimg,
+h1.titulofile,
+h1.titulovideos{
+	width: auto;
+	height: auto;
+	font-size: 1.0em;
+	border: 1px solid gray;
+	padding: 8px 5px 8px 32px;
+	color: #373737;
+	cursor: pointer;
+	margin: 5px 0 10px 0;
+}
+p.textodicas,
+p.textoshow{
+	width: auto;
+	height: auto;
+	background: ;
+	font-size: 1.0em;
+	border: 1px solid gray;
+	margin: 5px 0 10px 0;
+	padding: 5px;
+	color: #373737;
+	display: table;
+	text-align: left;
+	text-align: justify;
+
+	
+}
+h1.barradicas{
+	background:url("/assets/adm/light_bulb.png") left 2px no-repeat;
+}
+h1.barradicas:hover{
+	background:url("/assets/adm/light_bulbhover.png") left 2px no-repeat;
+}
+h1.barraformulario{
+	background:url("/assets/adm/edit.png") left 2px no-repeat;
+	
+}
+h1.barraformulario:hover{
+	background:url("/assets/adm/edithover.png") left 2px no-repeat;
+}
+h1.titulotexto{
+	background:url("/assets/adm/ptxt.png") 2px 2px no-repeat;
+}
+h1.titulotexto:hover{
+	background:url("/assets/adm/ptxthover.png") 2px 2px no-repeat;
+}
+h1.tituloimg{
+	background:url("/assets/adm/pimg.png") 2px 2px no-repeat;
+}
+h1.tituloimg:hover{
+	background:url("/assets/adm/pimghover.png") 2px 2px no-repeat;
+}
+h1.titulofile{
+	background:url("/assets/adm/pfile.png") 2px 2px no-repeat;
+}
+h1.titulofile:hover{
+	background:url("/assets/adm/pfilehover.png") 2px 2px no-repeat;
+}
+h1.titulovideos{
+	background:url("/assets/adm/pvideo.png") 2px 2px no-repeat;
+}
+h1.titulovideos:hover{
+	background:url("/assets/adm/pvideohover.png") 2px 2px no-repeat;
+}
+p.textoshow img{
+	border: 1px solid #373737;
+	border-style: dashed;
+	float: left;
+	margin: 4px;
+	position: relative;
+}
+/********************************************************************** Copiar acima *************************************************/
+
+
+/***************************** 
+Fim Meio
+*****************************/
+
+#rodape {
+	width: 100%;
+	height: 48px;
+	clear: both;
+}
+div#logoror{
+	width: 210px;
+	height: 42px;
+	float: right;
+	background:url("/assets/adm/copyright.png") no-repeat;	
+}
+ul#menurodape {
+	width: 750px;
+	margin: 0 0px 0 0;
+	height: 50px;
+	float:left;
+	clear:left;
+	overflow:hidden;
+	font-size:1.1em;
+}
+ul#menurodape li {
+  list-style-type:none;
+  float:left;
+  color: #fff;
+}
+ul#menurodape a {
+  float:left;
+  color: #fff;
+  margin: 0 8px 0 8px;
+  height: 24px;
+  padding: 4px 0 0 0;
+}
+ul#menurodape a.ativo {
+  color:#fff;
+}
+ul#menurodape a:hover {
+  background-color: #6a0e11;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+div#conteudorodape{
+	width: 960px;
+	height: auto;
+	text-align:left;
+	overflow:hidden;
+	margin:0 auto;
+}
+/**********************************************************************************************************************************************/
+div.login{
+	width: 232px;
+	height: 275px;
+	display: block;
+	margin: 5% 0 5% 35%;
+	padding: 5px;
+	border: 1px solid gray;
+}
+div.login form{
+	margin: 25px 0 0 0;
+	padding: 4px;
+	border: 1px solid gray;	
+}
+div.login form p{
+	margin: 0 ;
+}
+
+div.login form p input{
+	width: 218px;
+}
+div.login  form input.enviar{
+	float: right;
+}
+div.login ul.ullogin li{
+	float: left;
+	margin: 2px;
+	display: block;
+}
+div.login ul.ullogin li a{
+	color: gray;
+}
+div.login ul.ullembrarme{
+	display: table;
+	margin: -43px 0 0 0;
+}
+
+div.icologin{
+	width: 70px;
+	height: 70px;
+	background-image: url("/assets/adm/logar.png");
+	float: left;
+	border: 1px solid #fff;
+	margin: 0 20px 0 0;
+}
+h1.titlelogar{
+	padding: 15px 0 0 0;
+	color: gray;
+}
+h1.esqueceusenha{
+	padding: 15px 0 0 0;
+	color: gray;
+	font-size: 1.1em;
+}
+class.opcoes{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+<ul class="menuPortfolio">
+				<li><a href="/portfolio"  title="Veja todos os trabalhos">Todos os trabalhos</a></li> <!-- Class VISITED indica em que página o user está -->
+				<li><%= link_to "Sites", '#', :class=>"visited2", :title=>"Veja todos os projetos de sites, layouts, html, programção e css" %></li>
+				<li><%= link_to "Logotipos",  '/portfolio/logotipos', :title=>"Confira todos os trabalhos na criação de identidades visuais" %></li>
+				<li><%= link_to "Impressos", '/portfolio/impressos', :title=>"Confira todos os trabalhos impressos, como banners, cartões de visita, cartazes, folders e flayesr" %></li>
+				<li><a href="/portfolio/outros" title="Veja aqui outros trabalhos também relacionados com criações gráficas">Outros</a></li>
+				<li><a href="/" class="voltar" title="Voltar para a pagina anterior">Voltar</a></li>
+			</ul><!-- Fim Menu Portfolio -->
+			
+<%= render 'projetos', :projetos => @projetos %>

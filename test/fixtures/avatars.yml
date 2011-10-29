@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sobre: 
+  imagem_uid: MyString
+  imagem_name: MyString
+
+two:
+  sobre: 
+  imagem_uid: MyString
+  imagem_name: MyString

@@ -1,0 +1,50 @@
+				<div id="colunaesquerda">
+					<nav>	
+						<ul class="menuesquerdo">
+								<li><a href="#">Início</a></li>
+								<li><a href="#">Empresa</a></li>
+								<li><a href="#">Cidades</a></li>
+								<li><a href="#">Formas de pagamento</a></li>
+								<li><a href="#">Hotéis</a></li>
+								<li><a href="#">Fletes</a></li>
+								<li><a href="#">Pacotes</a></li>
+								<li><a href="#">Reservas</a></li>
+								<li><a href="#">Contato</a></li>
+						</ul>
+					</nav>	
+				</div><!-- Fim div coluna esquerda -->
+				
+				<div id="colunadireita">
+				
+				<h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
+				<p class="textodicas">
+					<span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type  <br /> <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</p>
+
+				<h1 class="barraformulario" >
+					Este formulário é referente ao cadastro do banner localizado no topo, caso tenha alguma duvida, consulte as dicas acima ou o manual de usuário.
+				</h1>
+
+  <%= semantic_form_for [:admin, @sobre] do |f| %>
+    <%= f.inputs "basico" do%>
+     <%= f.input :nome %>
+     <%= f.cktext_area :descricao %>
+    <% end %>
+    <%= f.inputs "Avatar" do %>
+      <%= f.semantic_fields_for :avatars do |avatar| %>
+        <%= avatar.input :imagem, :as => :file %>
+    <% end %>
+    <% end %>
+    <%= f.inputs "Social" do %>
+      <%= f.semantic_fields_for :socials do |builder| %>
+        <%= render "social_fields", :f => builder %>
+    <% end %>
+      <%= link_to_add_fields "Adicionar Social", f, :socials %>
+    <% end %>
+    <%= f.buttons %>
+  <% end %>
+
+ </div><!-- Fim div coluna Direita -->
+<%= content_for :head do %>
+<%= javascript_include_tag "ckeditor/ckeditor.js" %>
+<% end %> 
