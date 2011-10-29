@@ -65,3 +65,7 @@
 				
 				</div><!-- Fim div contentGreatColl -->
 			</div><!-- Fim div greatColl -->
+
+<%= content_for :footer do %>
+<%= javascript_include_tag 'simplegallery' %>
+<% end %>

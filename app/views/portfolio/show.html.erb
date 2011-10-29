@@ -41,20 +41,7 @@
 				<h2 class="titleGreatColl">Titulo Great Coll</h2>
 				<div class="contentGreatColl">
 					
-					<!--- O JS GERA ISSO AUTOMATICO 
-					<ul class="galleryimagelist">
-						<li><a href="javascript:void(0);"><<</a></li>  
-						<li class=""><a href="javascript:void(0);">1</a></li> 
-						<li class=""><a href="javascript:void(0);">2</a></li> 
-						<li class=""><a href="javascript:void(0);">3</a></li> 
-						<li class=""><a href="javascript:void(0);">4</a></li> 
-						<li class=""><a href="javascript:void(0);">5</a></li> 
-						<li class=""><a href="javascript:void(0);">6</a></li> 
-						<li class=""><a href="javascript:void(0);">7</a></li>
-						<li><a href="javascript:void(0);">>></a></li>
-					</ul>
-					DE ACORDO COM QUE FOR INSERINO O LI DO UL.GALLERYIMAGES A LISTA ACIMA É GERADA -->
-					
+				
 					<ul class="galleryimages">
            <% @projeto.projeto_imagems.each do |img| %>
 						<li style="display: none;"><%= image_tag img.imagem.url %><%= img.caption %></li>
