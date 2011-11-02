@@ -1,7 +1,0 @@
-<div class="fields">
-<%= f.file_field :imagem %>
-<%= f.hidden_field :retained_imagem %> 
-<% unless f.object == nil || f.object.new_record? %>
-  <%= image_tag f.object.imagem.thumb('64x64').url %>
-<% end %>
-</div>

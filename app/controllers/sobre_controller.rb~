@@ -1,2 +1,0 @@
-class SobreController < ApplicationController
-end
