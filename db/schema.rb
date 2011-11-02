@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -100,7 +99,6 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
   create_table "seos", :force => true do |t|
     t.string   "title"
     t.text     "alt"
-    t.text     "keywords"
     t.text     "description"
     t.integer  "seoable_id"
     t.string   "seoable_type"

@@ -9,7 +9,7 @@ layout 'admin'
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @admin_trabalhos }
+
     end
   end
 
@@ -20,7 +20,7 @@ layout 'admin'
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @admin_trabalho }
+
     end
   end
 
@@ -33,7 +33,7 @@ layout 'admin'
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @admin_trabalho }
+
     end
   end
 
@@ -49,11 +49,11 @@ layout 'admin'
 
     respond_to do |format|
       if @admin_trabalho.save
-        format.html { redirect_to @admin_trabalho, notice: 'Trabalho was successfully created.' }
-        format.json { render json: @admin_trabalho, status: :created, location: @admin_trabalho }
+        format.html { redirect_to @admin_trabalho, notice => 'Trabalho was successfully created.' }
+
       else
-        format.html { render action: "new" }
-        format.json { render json: @admin_trabalho.errors, status: :unprocessable_entity }
+        format.html { render  "new" }
+
       end
     end
   end
@@ -65,11 +65,11 @@ layout 'admin'
 
     respond_to do |format|
       if @admin_trabalho.update_attributes(params[:admin_trabalho])
-        format.html { redirect_to @admin_trabalho, notice: 'Trabalho was successfully updated.' }
+        format.html { redirect_to @admin_trabalho, notice => 'Trabalho was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @admin_trabalho.errors, status: :unprocessable_entity }
+        format.html { render "edit" }
+
       end
     end
   end
@@ -81,7 +81,7 @@ layout 'admin'
 
     respond_to do |format|
       format.html { redirect_to admin_trabalhos_url }
-      format.json { head :ok }
+
     end
   end
   
