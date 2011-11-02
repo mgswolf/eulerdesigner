@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,9 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111028145034) do
+ActiveRecord::Schema.define(:version => 20111102004806) do
 
   create_table "admin_sobres", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_trabalhos", :force => true do |t|
+    t.string   "cover_uid"
+    t.string   "cover_name"
+    t.string   "titulo"
+    t.string   "url"
+    t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,15 +97,28 @@ ActiveRecord::Schema.define(:version => 20111028145034) do
     t.datetime "updated_at"
   end
 
+  create_table "seos", :force => true do |t|
+    t.string   "title"
+    t.text     "alt"
+    t.text     "keywords"
+    t.text     "description"
+    t.integer  "seoable_id"
+    t.string   "seoable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "seos", ["seoable_id"], :name => "index_seos_on_seoable_id"
+
   create_table "side_covers", :force => true do |t|
-    t.integer  "projeto_id"
+    t.integer  "trabalho_id"
     t.string   "cover_uid"
     t.string   "cover_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "side_covers", ["projeto_id"], :name => "index_side_covers_on_projeto_id"
+  add_index "side_covers", ["trabalho_id"], :name => "index_side_covers_on_trabalho_id"
 
   create_table "sobres", :force => true do |t|
     t.string   "nome"

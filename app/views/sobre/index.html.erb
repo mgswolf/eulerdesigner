@@ -10,15 +10,15 @@
 
 					<div class="Osprojetos">
 						<h3 class="titleh3">Projetos que trabalho ou participo</h3>
-<%  projeto_desenvolvimento.each do |projeto| %>
+<%  trabalho_participo.each do |trabalho| %>
 <div>
-						<h4><%= projeto.titulo %></h4>
-						<%= image_tag projeto.cover.url %>
+						<h4><%= trabalho.titulo %></h4>
+						<%= image_tag trabalho.cover.url, :alt=> trabalho.seo.alt %>
 						<p class="descricao">
-						<%=raw projeto.descricao %>
+						<%=raw trabalho.descricao %>
 						</p>
 
-						<span>Visite e conheça mais sobre esse projeto em:<%= link_to projeto.url, projeto.url, :target=> :blank %></span>
+						<span>Visite e conheça mais sobre esse projeto em:<%= link_to trabalho.url, trabalho.url, :title=> trabalho.seo.title, :target=> :blank %></span>
 </div>		
 <% end %>
 					</div>

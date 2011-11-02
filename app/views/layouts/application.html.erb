@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title><%= @title ||= "Criação e desenvolvimento de sites, blogs, portais, sistemas e aplicações para internet - EulerDesign Freelancer Web Designer em Caldas Novas - Goiás" %></title>
+  <meta name="description" content="<%= @description ||= "EulerDesign Freelancer Web Designer em Caldas Novas - Goiás"%>" />
    <link rel="shortcut icon" href="/assets/faveico.png" type="image/png">
   <%= stylesheet_link_tag    "application" %>
   <%= csrf_meta_tags %>
@@ -26,7 +27,7 @@
       <ul>
         <li><a href="/" class="<%= "visited" if current_page?(:controller=>'home') %>" title="Voltar para a pagina inicial">Início</a></li> <!-- Class VISITED indica em que página o user está -->
         <li><a href="/sobre" class="<%= "visited" if current_page?(:controller=>'sobre') %>" title="Saiba um pouco mais sobre o EulerDesign">Sobre</a></li>
-        <li><a href="/portfolio" title="Conheça nosso portfólio e alguns trabalhos">Portfólio</a></li>
+        <li><a href="/portfolio" class="<%= "visited" if current_page?(:controller=> :portfolio) %>" title="Conheça nosso portfólio e alguns trabalhos">Portfólio</a></li>
         <li><a href="http://rorcaldas.com.br/blog" title="Leia sobre html, css, Ruby on Rails, web, programação, design, webdesign e muito mais no mundo da tecnologia">Blog</a></li>
         <li><a href="/contato" title="Contato" class="<%= "visited" if current_page?(:controller=>'contato') %>">Contato</a></li>
         <li class="/login"><a href="login.html" title="Acessar o painel administrativo do site"></a></li>
@@ -52,8 +53,8 @@
       <ul>
 
         <a href="/" class="<%= "visited" if current_page?(:controller=>'home') %>" title="Voltar para a pagina inicial">Início</a></li> <!-- Class VISITED indica em que página o user está -->
-        <li><a href="/sobre" title="Saiba um pouco mais sobre o EulerDesign">Sobre</a></li>
-        <li><a href="/portfolio" title="Conheça nosso portfólio e alguns trabalhos">Portfólio</a></li>
+        <li><a href="/sobre" class="<%= "visited" if current_page?(:controller=>'sobre') %>" title="Saiba um pouco mais sobre o EulerDesign">Sobre</a></li>
+        <li><a href="/portfolio" class="<%= "visited" if current_page?(:controller=>'portfolio') %>" title="Conheça nosso portfólio e alguns trabalhos">Portfólio</a></li>
         <li><a href="http://rorcaldas.com.br/blog" title="Leia sobre html, css, Ruby on Rails, web, programação, design, webdesign e muito mais no mundo da tecnologia">Blog</a></li>
         <li><a href="/contato" title="Contato" class="<%= "visited" if current_page?(:controller=>'contato') %>">Contato</a></li>
         <li class="/login"><a href="login.html" title="Acessar o painel administrativo do site"></a></li>

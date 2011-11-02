@@ -1,3 +1,52 @@
-// Place all the styles related to the sobre controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/******************* Inicio Pagina Sobre *******************/
+        .greatColl .contentGreatColl p.descricao{
+          width: 640px;
+          height: auto;
+          margin: 0px 0 10px 0;
+          float: left;
+          display: block;
+          color: #0f0f0f;
+          font-size: 13pt;
+          text-align: justify;
+        }
+        .greatColl .contentGreatColl .Osprojetos{
+          width: 640px;
+          height: auto;
+          float: left;
+        }
+        .greatColl .contentGreatColl .Osprojetos h3.titleh3{
+          width: 636px;
+          height: 25px;
+          display: block;
+          font-weight: normal;
+          font-size: 14pt;
+          color: #ffffff;
+          background: url("bgBoxs.png")  0px -1431px no-repeat;
+          padding: 1px 0px 0px 4px;
+          float: left;
+          margin: 0 0 4px 0;
+        }
+        .greatColl .contentGreatColl .Osprojetos h4{
+          width: 640px;
+          height: 25px;
+          display: block;
+          float: left;
+          color: #de3612;
+          font-size: 14pt;
+          margin: 15px 0 0 0;
+          font-weight: normal;
+        }
+        .greatColl .contentGreatColl .Osprojetos img{
+          border: 1px solid #de3612;
+          margin: 10px 0 10px 0;
+        }
+        .greatColl .contentGreatColl .Osprojetos span{
+          width: 640px;
+          height: auto;
+          display: block;
+          float: left;
+          color: #0f0f0f;
+          font-size: 13pt;
+          text-align: justify;
+        } 
+/******************* Fim Pagina Sobre *******************/

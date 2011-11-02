@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateSobres < ActiveRecord::Migration
   def change
     create_table :sobres do |t|

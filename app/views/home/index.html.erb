@@ -1,5 +1,5 @@
 <%= render 'shared/avatar', :about => about_atual %>
-           <% projetos = ultimos_trabalhos %>     
+           <% projetos = ultimos_projetos %>     
       <div class="ultimosTrabalhos">
         <h2 class="titlesRight">Últimos Trabalhos</h2><!-- Fim titles h2 -->
             <div id="slider-wrapper">
@@ -7,7 +7,7 @@
                <% projetos.each do |projeto| %>
                 <%= link_to portfolio_path(projeto), :class=>"contentSlide" do %>
                   <div class="imgSlide">
-                    <%= image_tag projeto.cover.url %>
+                    <%= image_tag projeto.cover.url, :alt=> projeto.seo.alt %>
                   </div>
                   <div class="textoSlide">
                     <h3><%= projeto.titulo %></h3>
@@ -27,10 +27,10 @@
             Conheçam alguns dos projetos que trabalho e participo.
         </span>
         <ul>
-
-           <% projetos.each do |projeto| %>
+           <% trabalhos = ultimos_trabalhos %>     
+           <% trabalhos.each do |trabalho| %>
           <li>
-             <%= link_to image_tag(projeto.side_cover.cover.url), portfolio_path(projeto), :title=>"PEGAR UMA DESCRIÇÃO DO PROJETO", :alt=> "PEGAR UMA DESCRIÇAÕ DA IMAGEM"  %>
+             <%= link_to image_tag(trabalho.side_cover.cover.url), trabalho.url, :target=>:blank, :title=>trabalho.seo.title, :alt=> trabalho.seo.alt  %>
           </li>
           <% end %>
         </ul>

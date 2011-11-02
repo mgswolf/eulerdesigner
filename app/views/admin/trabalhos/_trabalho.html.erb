@@ -1,0 +1,36 @@
+<table>
+
+  <thead>
+    <tr class="ordena">
+      <th>Título</th>
+      <th class="data">Modificado em</th>
+      <th class="visualizar">Visualizar</th>
+      <th class="editar">Editar</th>
+      <th class="excluir">Excluir</th>
+    </tr>
+  </thead>
+
+  <tfoot>
+    <tr>
+      <td colspan="5"></td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <% @admin_trabalhos.each do |trabalho| %>
+      <tr class="<%= cycle("gray", "graylight") %>">
+        <td><%= trabalho.titulo %></td>
+        <td><%= localize(trabalho.updated_at,:format => :short) %></td>
+        <td><%= link_to '',admin_trabalho_path(trabalho), :class =>"view", :title=>"Clique para Visualizar os detalhes deste cadastro" %></td>
+        <td><%= link_to '',edit_admin_trabalho_path(trabalho), :class =>"edit", :title=>"Clique para Editar os detalhes deste cadastro" %></td>
+        <td><%= link_to '',admin_trabalho_path(trabalho), :method => :delete, :confirm=>"Confirmar exclusão?", :class =>"delet", :title=>"Clique para Excluir este cadastro" %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+
+</table>
+
+<br />
+
+<div class="pagination" ><%= will_paginate @admin_trabalhos, :previous_label =>"<< Anterior" ,:next_label=>"Próxima >>" %></div>

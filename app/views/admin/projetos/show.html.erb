@@ -29,9 +29,12 @@
           <span class="destaquedicas"> Capa </span><%= image_tag @projeto.cover.thumb('64x64').url %><br />
           <span class="destaquedicas"> Descrição Imagem </span><%= @projeto.cover_descricao %><br />
 				</p>
-				<h1 class="titulotexto" >Side cover</h1>
+				<h1 class="titulotexto" >SEO</h1>
 				<p class="textoshow">
-          <span class="destaquedicas"> Capa </span><%= image_tag @projeto.side_cover.cover.thumb('64x64').url unless @projeto.side_cover.nil? %><br />
+          <span class="destaquedicas"> title </span><%= @projeto.seo.title %><br />
+<span class="destaquedicas"> Alt </span><%= @projeto.seo.alt %><br />
+<span class="destaquedicas"> Keywords </span><%= @projeto.seo.keywords %><br />
+<span class="destaquedicas"> Description </span><%= @projeto.seo.description %><br />
 				</p>
 				<h1 class="titulotexto" >Capa Portfolio</h1>
 				<p class="textoshow">
@@ -40,10 +43,15 @@
 				</p>
 				
 				<h1 class="tituloimg" >Títulos para sessão de imagens</h1>
-				<p class="textoshow">
+				<p class="textoshowimg">
           <ul>
           <% @projeto.projeto_imagems.each do |imagem| %>
             <li> <%= imagem.imagem_name %> <%= image_tag imagem.imagem.thumb('64x64').url %></li><br />
+           <span class="destaquedicas"> Legenda </span><%= imagem.caption %><br />
+           <span class="destaquedicas"> Descricao </span><%= imagem.descricao %><br />
+            SEO<br />
+           <span class="destaquedicas"> title </span><%= imagem.seo.title %><br />
+           <span class="destaquedicas"> Alt </span><%= imagem.seo.alt %><br />
           <% end %>
 					</ul>
 				</p>
@@ -53,6 +61,9 @@
 					<span class="destaquedicas"> Nome </span><%= profissional.nome %><br />
           <span class="destaquedicas"> Url </span><%= profissional.url %><br />
           <span class="destaquedicas"> Descrição </span><%= profissional.descricao %><br />
+            SEO<br />
+           <span class="destaquedicas"> title </span><%= profissional.seo.title %><br />
+           <span class="destaquedicas"> Alt </span><%= profissional.seo.alt %><br />
           <hr />
           <% end %>
 				</p>			

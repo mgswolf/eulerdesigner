@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateCapaPortfolios < ActiveRecord::Migration
   def change
     create_table :capa_portfolios do |t|

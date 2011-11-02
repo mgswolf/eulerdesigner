@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Sobre < ActiveRecord::Base
   has_many :avatars
   has_many :socials

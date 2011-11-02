@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::ProjetosController < ApplicationController
   before_filter :require_user 
   before_filter :get_projeto, :only=>[:show,:edit,:update,:destroy]
@@ -11,7 +12,7 @@ class Admin::ProjetosController < ApplicationController
   
   def new
     @projeto = Projeto.new
-    side_cover = @projeto.build_side_cover
+    side_cover = @projeto.build_seo
     capa_portfolio = @projeto.build_capa_portfolio
   end
   

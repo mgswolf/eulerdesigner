@@ -1,4 +1,6 @@
 				<ul>
 					<li class="boxes"><%= link_to "/admin/sobres" do %><div class="icone1">Sobre</div><% end %></li>
+          <li class="boxes"><%= link_to "/admin/projetos" do %><div class="icone2">Projetos</div><% end %></li>
+          <li class="boxes"><%= link_to "/admin/users" do %><div class="icone3">Usuários</div><% end %></li>
 
 				</ul>

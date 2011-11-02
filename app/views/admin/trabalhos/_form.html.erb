@@ -1,0 +1,50 @@
+
+  <h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
+  <p class="textodicas">
+    <span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+    <br />
+    <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+  </p>
+  <h1 class="barraformulario" > Este formulário é referente ao cadastro do banner localizado no topo, caso tenha alguma duvida, consulte as dicas acima ou o manual de usuário. </h1>
+
+<%= form_for @admin_trabalho do |f| %>
+<fieldset class="fieldes">
+<legend class="legends" >Básico</legend>
+<p>
+<label class="labels">Titulo:</label>
+    <%= f.text_field :titulo %>
+</p>
+<label class="labels">Capa</label>
+<p>   
+        <%= f.file_field :cover %>
+</p> 
+<label class="labels">URL</label>
+<p>        
+    <%= f.url_field :url %>
+</p> 
+<br />
+<label class="labels">Descricao</label>
+<p>    
+    <%= f.cktext_area :descricao %>
+</p>    
+  </fieldset>
+  <fieldset class="fieldes">
+<legend class="legends" >SEO</legend>
+<%= f.fields_for  :seo, @admin_trabalho.seo do |seo| %>
+<%= render 'shared/complete_seo', :seo => seo %>
+<% end %>
+</fieldset>
+<fieldset class="fieldes">
+<legend class="legends" >Capa Home</legend>
+<%= f.fields_for  :side_cover, @admin_trabalho.side_cover do |builder| %>
+<%= render 'side_cover_fields', :f => builder %>
+<% end %>
+</fieldset>
+ 
+    <%= f.submit 'Salvar' %>
+
+<% end %>
+
+<%= content_for :head do %>
+<%= javascript_include_tag "ckeditor/ckeditor.js" %>
+<% end %> 

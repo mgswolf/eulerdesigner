@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateProfissionals < ActiveRecord::Migration
   def change
     create_table :profissionals do |t|

@@ -1,4 +1,7 @@
+# -*- encoding : utf-8 -*-
 Eulerdesign::Application.routes.draw do
+   
+
     root :to => 'home#index'
  
 
@@ -69,6 +72,7 @@ Eulerdesign::Application.routes.draw do
        resources :sobres
        resources :users
        resources :projetos
+       resources :trabalhos
        root :to => 'home#index'
      end
 

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cover uid:</b>
+  <%= @admin_trabalho.cover_uid %>
+</p>
+
+<p>
+  <b>Cover name:</b>
+  <%= @admin_trabalho.cover_name %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @admin_trabalho.titulo %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @admin_trabalho.url %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @admin_trabalho.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_trabalho_path(@admin_trabalho) %> |
+<%= link_to 'Back', admin_trabalhos_path %>

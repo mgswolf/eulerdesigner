@@ -11,7 +11,6 @@ gem 'json'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly' #https://github.com/markevans/dragonfly
 gem 'ckeditor' #https://github.com/galetahub/ckeditor
-gem 'formtastic' #https://github.com/justinfrench/formtastic
 gem 'will_paginate'
 gem 'rails_best_practices'
 gem 'delayed_job' #github.com/collectiveidea/delayed_job

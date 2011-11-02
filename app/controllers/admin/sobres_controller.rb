@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class Admin::SobresController < ApplicationController
    before_filter :require_user 
   before_filter :get_about, :only=>[:show,:edit,:update,:destroy]

@@ -1,7 +1,28 @@
 <div class="fields">
-<%= f.file_field :imagem %><span class="hint">tamanho largura 629px </span>
+<fieldset class="fieldes">
+<p>
+<label class="labels">Imagem: tamanho largura 629px</label>
+<%= f.file_field :imagem, :placeholder => "tamanho largura 629px" %>
 <%= f.hidden_field :retained_imagem %> 
 <% unless f.object == nil || f.object.new_record? %>
   <%= image_tag f.object.imagem.thumb('64x64').url %>
 <% end %>
+</p>
+<p>
+<label class="labels">Nome:</label>
+<%= f.text_field :caption, :placeholder => "Legenda da Imagem" %>
+</p>
+<p>
+<label class="labels">Descrição:</label> 
+ <%= f.text_area :descricao, :placeholder => "Não sei pra que mas coloquei esse campo" %>
+</p>  
+<hr />
+<label class="labels">SEO:</label><br />
+<% @seo = f.object.build_seo %>
+ <%= f.fields_for :seo, f.object.seo do |seo| %>
+   <%= render "/shared/simple_seo", :seo => seo %>
+    <% end %>
+<br />
+<%= link_to_remove_fields "Remover Imagem", f %>
+</fieldset>
 </div>

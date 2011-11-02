@@ -6,7 +6,7 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
-gem 'friendly_id'#http://norman.github.com/friendly_id/
+gem "friendly_id", "~> 4.0.0.beta14" #http://norman.github.com/friendly_id/
 gem 'json'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly' #https://github.com/markevans/dragonfly

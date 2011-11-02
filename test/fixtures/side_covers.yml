@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trabalho: 
+  cover_uid: MyString
+  cover_name: MyString
+
+two:
+  trabalho: 
+  cover_uid: MyString
+  cover_name: MyString

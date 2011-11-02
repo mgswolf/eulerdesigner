@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cover_uid: MyString
+  cover_name: MyString
+  titulo: MyString
+  url: MyString
+  descricao: MyString
+
+two:
+  cover_uid: MyString
+  cover_name: MyString
+  titulo: MyString
+  url: MyString
+  descricao: MyString

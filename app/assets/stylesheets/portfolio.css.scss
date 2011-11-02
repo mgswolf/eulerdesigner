@@ -1,3 +1,280 @@
 // Place all the styles related to the portfolio controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/******************* Inicio Portifolio *******************/
+    .contentMeioPagina ul.menuPortfolio{
+      width: 968px;
+      height: 32px;
+      display: block;
+      float: left;
+      margin: 0 0 15px 0;
+    }
+      .contentMeioPagina ul.menuPortfolio li{
+        width: auto;
+        height: 32px;
+        display: block;
+        float: left;
+        margin: 0 15px 0 0;
+      }
+        .contentMeioPagina ul.menuPortfolio li a{
+          width: auto;
+          height: 30px;
+          display: block;
+          font-size: 18pt;
+          color: #de3612;
+          float: left;
+          margin: 0 0 0 0;
+          padding: 2px 8px 0 8px;
+          background: url("gradeBg.png");
+        }
+        .contentMeioPagina ul.menuPortfolio li a:hover{
+          background: #de3612;
+          color: #ffffff;
+          text-decoration: none;
+        }
+        .contentMeioPagina ul.menuPortfolio li a.visited2{
+          background: #de3612;
+          color: #ffffff;
+          text-decoration: none;
+        }
+        .contentMeioPagina ul.menuPortfolio li a.visited2:hover{
+          background: url("gradeBg.png");
+          color: #de3612;
+          text-decoration: none;
+        }
+        .contentMeioPagina ul.menuPortfolio li a.voltar{
+          width: 70px;
+          height: 30px;
+          background: url("bgBoxs.png")  -172px -691px no-repeat;
+          padding: 2px 0px 0px 20px;
+          margin: 0px 0px 0px 160px;
+          color: #ffffff;
+          text-decoration: none;
+        }
+        .contentMeioPagina ul.menuPortfolio li a.voltar:hover{
+          background: url("bgBoxs.png")  -172px -725px no-repeat;
+          color: #FFFFF;
+          text-decoration: none;
+        }
+    .contentMeioPagina ul.contentPortfolio{
+      width: 968px;
+      height: auto;
+      display: block;
+      float: left;
+      margin: 15px 0 15px 0;  
+    }
+      .contentMeioPagina ul.contentPortfolio li{
+        width: 472px;
+        height: 370px;
+        display: block;
+        float: left;
+        margin: 0 6px 15px 6px;
+      }
+        .contentMeioPagina ul.contentPortfolio li h2{
+          width: 470px;
+          height: 25px;
+          display: block;
+          font-weight: normal;
+          font-size: 14pt;
+          color: #ffffff;
+          background: url("bgBoxs.png")  0px -1431px no-repeat;
+          padding: 1px 0px 0px 2px;
+          float: left;
+          margin: 0 0 4px 0;
+        }
+        .contentMeioPagina ul.contentPortfolio li a.box{
+          width: 472px;
+          height: 345px;
+          background: url("gradeBg.png");
+          display: block;
+          float: left;
+          margin: 0 0 0 0;
+          overflow: hidden;
+        }
+        .contentMeioPagina ul.contentPortfolio li a.box:hover{
+          background: #f1e7f3;
+          color: #ffffff;
+          text-decoration: none;
+        }
+          .contentMeioPagina ul.contentPortfolio li a img{
+            width: 442px;
+            height: 224px;
+            display: block;
+            float: left;
+            margin: 15px 0 0 15px;
+          }
+          .contentMeioPagina ul.contentPortfolio li a span{
+            width: 442px;
+            height: 60px;
+            font-size: 13pt;
+            color: #0f0f0f;
+            display: block;
+            text-align: justify;
+            text-decoration: none;
+            float: left;
+            margin: 15px 0 0 15px;
+            overflow: hidden;
+            
+          
+            }
+            .contentMeioPagina ul.contentPortfolio li a span.vejaMais {
+              width: 50px;
+              height: 20px;
+              float: right;
+              color: #de3612;
+              background: none;
+              margin: 0 14px 0 0;
+            }
+/******************* Fim Pagina Portifolio *******************/ 
+
+/******************* Inicio Pagina Portifolio Aberto *******************/
+    
+    .contentMeioPagina .smallColl{
+      width: 290px;
+      height: auto;
+      display: block;
+      float: left;
+      margin: 0px 15px 0 0;
+      overflow: hidden;
+    }
+      .contentMeioPagina .smallColl h2.titleSmallColl{
+        width: 286px;
+        height: 23px;
+        float: left;
+        background: url("bgBoxs.png")  -308px -1738px no-repeat;
+        color: #ffffff;
+        font-size: 13pt;
+        padding: 2px 0 0 4px;
+        font-weight: normal;  
+      }
+      .contentMeioPagina .contentSmallColl{
+        width: 270px;
+        height: auto;
+        float: left;
+        background: url("gradeBg.png");
+        display: block;
+        margin: 2px 0 0 0;
+        padding: 10px;
+      }
+      .contentMeioPagina .contentSmallColl span{
+        width: 270px;
+        height: 18px;
+        float: left;
+        display: block;
+        color: #de3612;
+        font-size: 13pt;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+      }
+      .contentMeioPagina .contentSmallColl p{
+        width: 270px;
+        height: auto;
+        float: left;
+        display: block;
+        color: #0f0f0f;
+        font-size: 13pt;
+        margin: 0 0 15px 0;
+        text-align: justify;
+      }
+      .contentMeioPagina .contentSmallColl p a,
+      .contentMeioPagina .greatColl p a,
+      .contentMeioPagina .greatColl a{
+      
+        text-decoration: underline;
+        
+        color: #de3612;
+      }
+      .contentMeioPagina .contentSmallColl p a:hover,
+      .contentMeioPagina .greatColl p a:hover,
+      .contentMeioPagina .greatColl a:hover{
+        background: #7c019a;
+        color: #ffffff;
+      }
+    .contentMeioPagina .greatColl{
+      width: 660px;
+      height: auto;
+      display: block;
+      float: left;
+      overflow: hidden;
+    }
+      .contentMeioPagina .greatColl h2.titleGreatColl{
+        width: 656px;
+        height: 23px;
+        float: left;
+        background: url("bgBoxs.png")  -308px -1738px no-repeat;
+        color: #ffffff;
+        font-size: 13pt;
+        padding: 2px 0 0 4px;
+        font-weight: normal;
+      }
+      .contentMeioPagina .greatColl .contentGreatColl{
+      width: 640px;
+      height: auto;
+      background: url("gradeBg.png");
+      display: block;
+      float: left;
+      margin: 2px 0 0 0;
+      padding: 10px;
+      }
+      /********************************** CSS GALERIA DO PORTFOLIO ***********************/
+        .greatColl .contentGreatColl  ul.galleryimages, 
+        .greatColl .contentGreatColl ul.galleryimages li, 
+        .greatColl .contentGreatColl ul.galleryimagelist, 
+        .greatColl .contentGreatColl ul.galleryimagelist li { 
+          margin: 0; 
+          padding: 0; 
+          list-style-type: none; 
+
+        } 
+        .greatColl .contentGreatColl  ul.galleryimages li, 
+        .greatColl .contentGreatColl ul.galleryimages img { 
+          width: 640px;
+          height: auto;
+          
+          float: left;
+          display: block;
+          color: #0f0f0f;
+          font-size: 13pt;
+          text-align: justify;
+        } 
+        .greatColl .contentGreatColl  ul.galleryimages { 
+          width: 640px;
+          height: auto;
+          float: left;
+          display: block;
+        }
+        .greatColl .contentGreatColl  ul.galleryimagelist { 
+          width: 640px;
+          height: auto;
+          float: left;
+          display: block;
+          margin: 0 0 10px 0;
+          background-color: #ffffff;
+          border: 1px solid #f9f9f9;
+        } 
+        .greatColl .contentGreatColl  ul.galleryimagelist li { 
+          width: auto;
+          height: auto;
+          display: block;
+          margin: 2px;
+          float: left;
+        } 
+        .greatColl .contentGreatColl  ul.galleryimagelist a { 
+          width:20px;
+          height: 20px;
+          display: block;
+          text-decoration: none; 
+          text-align: center;
+          color: #ffffff;
+          background: #de3612;
+          padding: 4px 0 0 0;
+        } 
+        .greatColl .contentGreatColl ul.galleryimagelist a:hover, 
+        .greatColl .contentGreatColl ul.galleryimagelist li.activeimage a { 
+          color: #FFFFFF; 
+          background: #7c019a;
+        
+        }
+      /********************************** FIM CSS GALERIA DO PORTFOLIO ***********************/ 
+/******************* Fim Pagina Portifolio Aberto *******************/

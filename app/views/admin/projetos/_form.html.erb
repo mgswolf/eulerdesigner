@@ -1,15 +1,7 @@
 				<div id="colunaesquerda">
 					<nav>	
 						<ul class="menuesquerdo">
-								<li><a href="#">Início</a></li>
-								<li><a href="#">Empresa</a></li>
-								<li><a href="#">Cidades</a></li>
-								<li><a href="#">Formas de pagamento</a></li>
-								<li><a href="#">Hotéis</a></li>
-								<li><a href="#">Fletes</a></li>
-								<li><a href="#">Pacotes</a></li>
-								<li><a href="#">Reservas</a></li>
-								<li><a href="#">Contato</a></li>
+								<li><a href="/admin/projetos">Início</a></li>
 						</ul>
 					</nav>	
 				</div><!-- Fim div coluna esquerda -->
@@ -26,45 +18,69 @@
 				</h1>
 
   <%= form_for [:admin, @projeto] do |f| %>
-"basico"
-    Titulo: <%= f.text_field :titulo %><br />
-    Cliente: <%= f.text_field :cliente %><br />
-     Ano:<%= f.text_field :ano %><br />
-     Url:<%= f.url_field :url %><br />
-Categoria:<%=f.select :categoria, ([["Site", "Site"], ["Impresso","Impresso"], ["Logotipo","Logotipo"], ["Outro","Outro"]]) %><br />
-Ano:<%= f.text_field :ano %><br />
-     Descrição:<%= f.cktext_area :descricao %>
-
- "Slider Home" 
+<fieldset class="fieldes">
+<legend class="legends" >Básico</legend>
+<p>
+<label class="labels">Titulo:</label>
+ <%= f.text_field :titulo %>
+</p>
+<p>
+<label class="labels">Cliente:</label>
+ <%= f.text_field :cliente %>
+</p>
+<p>
+<label class="labels">Ano:</label>
+ <%= f.text_field :ano %>
+</p>
+<p>
+<label class="labels">Url:</label>
+   <%= f.url_field :url %>
+</p>
+<p>
+<label class="labels">Categoria:</label>
+<%=f.select :categoria, ([["Site", "Site"], ["Impresso","Impresso"], ["Logotipo","Logotipo"], ["Outro","Outro"]]), :class=>"selectoptions" %><br />
+</p><br />
+<p>
+<label class="labels">Descrição:</label>
+     <%= f.cktext_area :descricao %>
+</p>
+</fieldset>
+ 							<fieldset class="fieldes">
+								<legend class="legends" >Slider Home</legend>
      <%= f.file_field :cover %><span class="hint">tamanho 608×260 </span>
      Descrição Slider Home:<%= f.text_area :cover_descricao %>
-
-
----------------------------------
- "Capa Portfolio"
+</fieldset>
+  							<fieldset class="fieldes">
+								<legend class="legends" >Capa Portfolio</legend>
  <%= f.fields_for :capa_portfolio do |cp| %>
         <%= cp.file_field :cover %><span class="hint">tamanho 442×224 </span>
         <%= cp.text_area :descricao %>
     <% end %>
----------------------------------
- "Imagem Home"
- <%= f.fields_for :side_cover do |sc| %>
-        <%= sc.file_field :cover  %> <span class="hint">tamanho 255×62 </span>
-    <% end %>
----------------------------------
+</fieldset>
+   							<fieldset class="fieldes">
+								<legend class="legends" >SEO</legend>
+ <%= f.fields_for :seo do |seo| %>
+   <%= render "/shared/complete_seo", :seo => seo %>
+ <% end %>
+</fieldset>
+   							<fieldset class="fieldes">
+								<legend class="legends" >Imagens</legend>
  <div id="Imagens">
       <%= f.fields_for :projeto_imagems do |builder| %>
         <%= render "projeto_imagem_fields", :f => builder %>
     <% end %>
       <%= link_to_add_fields "Adicionar Imagem", f, :projeto_imagems %>
 </div>
-
+</fieldset>
+   							<fieldset class="fieldes">
+								<legend class="legends" >Profissionais</legend>
  <div id="Profissionais">
       <%= f.fields_for :profissionals do |builder| %>
         <%= render "profissional_fields", :f => builder %>
     <% end %>
       <%= link_to_add_fields "Adicionar Profissional", f, :profissionals %>
 </div>
+</fieldset>
     <%= f.submit %>
   <% end %>
 

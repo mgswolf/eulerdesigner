@@ -1,11 +1,14 @@
+# -*- encoding : utf-8 -*-
 Eulerdesign::Application.routes.draw do
+  namespace :admin do resources :trabalhos end
+
     root :to => 'home#index'
  
 
   resources :home, :only=>[:index]
   resources :portfolio, :only=>[:index,:show] do
     collection do    
-      get 'sites', 'impressos', 'logotipos'
+      get 'sites', 'impressos', 'logotipos', 'outros'
     end
   end
   resources :sobre, :only=>[:index]
