@@ -1,7 +1,7 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/******************* Inicio index *******************/  
+/******************* Inicio index *******************/
   h2.titlesLeft{
     width: auto;
       height: 25px;
@@ -61,7 +61,7 @@
             height: 24px;
             display: block;
             margin: 0px 0 12px 0;
-            font-size: 13pt;  
+            font-size: 13pt;
           }
             .conectese nav ul li a{
               color: #de3612;
@@ -262,7 +262,7 @@
       .projetos ul li a{
         width:255px;
         height: 62px;
-        display: block; 
+        display: block;
         color: #0f0f0f;
       }
       .projetos ul li a:hover{
@@ -290,16 +290,16 @@
       }
       .ideiasSolucoes p{
         width:608px;
-        height: 120px;
+        height: 125px;
         display: block;
         float: left;
-        margin: 10px 0 0 35px;
+        margin: 5px 0 0 35px;
         text-align: justify;
         font-size: 13pt;
         color: #0f0f0f;
         overflow: hidden;
       }
-      .ideiasSolucoes form{
+      .ideiasSolucoes form.form_contato{
         width: 588px;
         height: 222px;
         margin: 5px 0 0 35px;
@@ -308,31 +308,31 @@
         overflow: hidden;
         font-family:  Arial, Verdana, sans-serife;
         float: left;
-        background: #7c019a url("Texturebg.png") 
+        background: #7c019a url("Texturebg.png")
       }
-      .ideiasSolucoes form fieldset{
+      .ideiasSolucoes form.form_contato fieldset{
         width: 588px;
         height: 222px;
         display: block;
         float: left;
       }
-      .ideiasSolucoes form fieldset div.left{
+      .ideiasSolucoes form.form_contato fieldset div.left{
         width: 285px;
         height: 184px;
         float: left;
       }
-      .ideiasSolucoes form fieldset div.right{
+      .ideiasSolucoes form.form_contato fieldset div.right{
         width: 285px;
         height: 184px;
         float: right;
       }
-      .ideiasSolucoes form fieldset label{
+      .ideiasSolucoes form.form_contato fieldset label{
         width: 285px;
         height: 18px;
         font-size: 13pt;
         color: #ffffff;
       }
-      .ideiasSolucoes form fieldset input{
+      .ideiasSolucoes form.form_contato fieldset input{
         width: 283px;
         height: 30px;
         color: #de3612;
@@ -340,8 +340,8 @@
         border: 1px solid #ffffff;
         background: #ffffff url("gradeBg.png");
       }
-      .ideiasSolucoes form fieldset input.enviar{
-        width: 110px;
+      .ideiasSolucoes form.form_contato fieldset input.enviar-home{
+        width: 150px;
         height: 28px;
         display: block;
         cursor: pointer;
@@ -351,12 +351,13 @@
         margin: 8px 0 0 0;
         float: right;
         background: #ffffff url("gradeBg.png");
+
       }
-      .ideiasSolucoes form fieldset input.enviar:hover{
+      .ideiasSolucoes form.form_contato fieldset input.enviar-home:hover{
         background: #de3612;
         color: #ffffff;
       }
-      .ideiasSolucoes form fieldset textarea{
+      .ideiasSolucoes form.form_contato fieldset textarea{
         width: 279px;
         height: 158px;
         font-family:  Arial, Verdana, sans-serife;
@@ -366,11 +367,11 @@
         padding: 2px;
         background: #ffffff url("gradeBg.png");
       }
-      .ideiasSolucoes form fieldset input:focus,
-      .ideiasSolucoes form fieldset textarea:focus{
-        background: #f7ebfa; 
+      .ideiasSolucoes form.form_contato fieldset input:focus,
+      .ideiasSolucoes form.form_contato fieldset textarea:focus{
+        background: #f7ebfa;
       }
-      .ideiasSolucoes form fieldset span{
+      .ideiasSolucoes form.form_contato fieldset span{
         width: auto;
         height: auto;
         margin: 12px 0 0 0;

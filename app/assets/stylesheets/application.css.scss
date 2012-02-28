@@ -1,4 +1,4 @@
-/******************** 
+/********************
 Globais Rest
 *********************/
 *{
@@ -25,7 +25,7 @@ a:hover {
 a img {
   border:none;
 }
-/***************************** 
+/*****************************
 FIM Globais Rest
 *****************************/
 body, body#home {
@@ -43,18 +43,18 @@ html {
 }
 *::-moz-selection {
 background: #de3612;
-color:#ffffff; 
+color:#ffffff;
 }
 *::selection {
 background: #de3612;
-color:#ffffff; 
+color:#ffffff;
 }
 .topoPagina {
   text-align:left;
   overflow:hidden;
   width: 968px;
   height: 241px;
-  margin:0 auto; 
+  margin:0 auto;
 }
 a.visited{
   background: #de3612;
@@ -65,7 +65,7 @@ a.visited:hover {
   color: #2b2522;
 }
   a.linklogo{
-    width: 290px; 
+    width: 290px;
     height: 227px;
     display: block;
     color: #fff;
@@ -74,10 +74,10 @@ a.visited:hover {
     float: left;
     }
       h1.logo {
-        width: 290px; 
+        width: 290px;
         height: 227px;
-        position: relative; 
-        text-indent: -9999px; 
+        position: relative;
+        text-indent: -9999px;
         background-color:  #FFFFFF;
         background: url("bgBoxs.png") 0px -235px no-repeat;
         float: left;
@@ -158,13 +158,13 @@ a.visited:hover {
   overflow:hidden;
   width: 100%;
   height: auto;
-  margin:0 auto; 
+  margin:0 auto;
 }
   .contentMeioPagina{
     text-align:left;
     width: 968px;
     height: auto;
-    margin:0 auto; 
+    margin:0 auto;
     padding: 15px 0 15px 0;
     display: table;
     clear: both;
@@ -216,7 +216,7 @@ a.visited:hover {
         padding: 2px;
       }
       .contentMeioPagina .boxHorizontal form.login fieldset p  input:focus{
-        background: #f7ebfa; 
+        background: #f7ebfa;
       }
       .contentMeioPagina .boxHorizontal form.login fieldset div.enviar{
         width: 443px;
@@ -243,7 +243,7 @@ a.visited:hover {
       }
       .contentMeioPagina .boxHorizontal form.login fieldset div.enviar input:hover{
         color: #FFFFFF;
-        background: #de3612; 
+        background: #de3612;
       }
 
 /******************* Fim Pagina Login *******************/
@@ -257,7 +257,7 @@ a.visited:hover {
   .contentRodape{
     width: 968px;
     height: 53px;
-    margin: 0 auto; 
+    margin: 0 auto;
     clear: both;
   }
     .contentRodape nav ul{
@@ -274,7 +274,7 @@ a.visited:hover {
         display: block;
         margin: 0 18px 0 18px;
         float: left;
-      }   
+      }
       .contentRodape nav ul li a{
         width: auto;
         height: 39px;
@@ -302,7 +302,7 @@ a.visited:hover {
       }
       .contentRodape nav ul li.login a:hover{
         background: url("bgBoxs.png") -20px -690px no-repeat;
-      } 
+      }
     div.copyright{
       width: 421px;
       height: 53px;

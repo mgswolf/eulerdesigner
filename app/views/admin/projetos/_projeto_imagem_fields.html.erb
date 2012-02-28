@@ -1,21 +1,27 @@
 <div class="fields">
-<fieldset class="fieldes">
-<p>
-<label class="labels">Imagem: tamanho largura 629px</label>
-<%= f.file_field :imagem, :placeholder => "tamanho largura 629px" %>
-<%= f.hidden_field :retained_imagem %> 
-<% unless f.object == nil || f.object.new_record? %>
-  <%= image_tag f.object.imagem.thumb('64x64').url %>
-<% end %>
-</p>
-<p>
-<label class="labels">Nome:</label>
+  <div class="clearfix">
+    <%= f.label :imagem,"Imagem: tamanho largura 629px" , :class => :label %>
+    <div class="input">
+      <%= f.file_field :imagem, :placeholder => "tamanho largura 629px" %>
+      <% unless f.object == nil || f.object.new_record? %>
+          <%= image_tag f.object.imagem(:thumb) %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :caption, :class => :label %>
+    <div class="input">
 <%= f.text_field :caption, :placeholder => "Legenda da Imagem" %>
-</p>
-<p>
-<label class="labels">Descrição:</label> 
- <%= f.text_area :descricao, :placeholder => "Não sei pra que mas coloquei esse campo" %>
-</p>  
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :descricao,"Descrição", :class => :label %>
+    <div class="input">
+ <%= f.text_area :descricao, :placeholder => "Não sei pra que mas coloquei esse campo", :class=>"textarea span8" %>
+    </div>
+  </div>
 <hr />
 <label class="labels">SEO:</label><br />
 <% @seo = f.object.build_seo %>
@@ -23,6 +29,4 @@
    <%= render "/shared/simple_seo", :seo => seo %>
     <% end %>
 <br />
-<%= link_to_remove_fields "Remover Imagem", f %>
-</fieldset>
 </div>

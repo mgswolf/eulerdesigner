@@ -1,10 +1,14 @@
+<div class="clearfix">
+  <%= seo.label :title, t("activerecord.attributes.sobre.descricao", :default => "Title"), :class => :label %>
+  <div class="input">
+    <%= seo.text_field :title, :placeholder => "texto que aparecerá com o hover do mouse"  %>
+  </div>
+</div>
+<div class="clearfix">
+  <%= seo.label :alt, t("activerecord.attributes.sobre.descricao", :default => "Alt"), :class => :label %>
+  <div class="input">
+    <%= seo.text_field :alt ,:placeholder => "Texto que aparecerá quando a imagem/video não estiver disponivel" %>
+  </div>
+</div>
 
-<p>
-<label class="labels">Title:</label>
-<%= seo.text_field :title, :placeholder => "texto que aparecerá com o hover do mouse"  %>
-</p>
-<p>
-<label class="labels">Alt:</label>
-<%= seo.text_field :alt ,:placeholder => "Texto que aparecerá quando a imagem/video não estiver disponivel" %>
-</p>
 

@@ -1,14 +1,19 @@
-<p>
-<label class="labels">Title:</label>
+<div class="clearfix">
+  <%= seo.label :title, :class => "label" %>
+  <div class="input">
 <%= seo.text_field :title, :placeholder => "texto que aparecerá com o hover do mouse"  %>
-</p>
-<p>
-<label class="labels">Alt:</label>
+</div>
+</div>
+<div class="clearfix">
+  <%= seo.label :alt, :class => "label" %>
+  <div class="input">
 <%= seo.text_field :alt ,:placeholder => "Texto que aparecerá quando a imagem/video não estiver disponivel" %>
-</p>
-<br />
-<p>
-<label class="labels">Description:</label>
-<%= seo.text_area :description,:placeholder => "Este texto aparecerá na meta tag 'description' *Descrever o conteúdo da página com precisão e sucintamente *Servir de uma pequena propaganda para atrair tráfego orgânico *Para disponibilizar as palavras-chave para os buscadores "  %>
-</p>
+  </div>
+</div>
+<div class="clearfix">
+  <%= seo.label :description,"Descrição", :class => "label" %>
+  <div class="input">
+<%= seo.text_area :description,:placeholder => "Este texto aparecerá na meta tag 'description' *Descrever o conteúdo da página com precisão e sucintamente *Servir de uma pequena propaganda para atrair tráfego orgânico *Para disponibilizar as palavras-chave para os buscadores ", :class=>"span8"  %>
+  </div>
+</div>
 

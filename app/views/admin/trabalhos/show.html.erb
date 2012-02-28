@@ -1,70 +1,32 @@
-<p id="notice"><%= notice %></p>
+<label class="label">Titulo</label>
+<p><%= @trabalho.titulo %></p>
 
-<p>
-  <b>Cover uid:</b>
-  <%= @admin_trabalho.cover_uid %>
-</p>
+<label class="label">Descrição</label>
+<p><%= sanitize(@trabalho.descricao) %></p>
 
-<p>
-  <b>Cover name:</b>
-  <%= @admin_trabalho.cover_name %>
-</p>
+<label class="label">URL</label>
+<p><%= @trabalho.url %></p>
 
-<p>
-  <b>Titulo:</b>
-  <%= @admin_trabalho.titulo %>
-</p>
+<label class="label">Capa</label>
+<p><%= image_tag @trabalho.cover(:thumb) %></p>
 
-<p>
-  <b>Url:</b>
-  <%= @admin_trabalho.url %>
-</p>
+<label class="label">Capa Página Inicial</label>
+<p><%= image_tag @trabalho.side_cover.imagem(:thumb) unless @trabalho.side_cover.nil? %></p>
 
-<p>
-  <b>Descricao:</b>
-  <%= @admin_trabalho.descricao %>
-</p>
+<div class="well">
+ <h3>SEO</h3>
+  <label class="label">Title</label>
+  <p><%= @trabalho.seo.title %></p>
 
-        <div id="colunaesquerda">
-          <nav> 
-            <ul class="menuesquerdo">
-                <li><a href="/admin/trabalhos">Início</a></li>
-                <li><%= link_to "Editar", edit_admin_trabalho_path(@admin_trabalho) %></li>
+  <label class="label">ALT</label>
+  <p><%= @trabalho.seo.alt %></p>
 
-            </ul>
-          </nav>  
-        </div><!-- Fim div coluna esquerda -->
-        
-        <div id="colunadireita">
-        
-        <h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
-        <p class="textodicas">
-          <span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type  <br /> <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
-        
-        <h1 class="titulotexto" >Títulos para sessão de textos</h1>
-        <p class="textoshow">
-          <span class="destaquedicas"> Sobre </span><%= @admin_trabalho.titulo %><br />
-          <span class="destaquedicas"> Descrição </span><%= @admin_trabalho.descricao %><br />
-          <span class="destaquedicas"> URL </span><%= @admin_trabalho.url %><br />
-          SEO<br />
-          <span class="destaquedicas"> Title </span><%= @admin_trabalho.seo.title %><br />
-          <span class="destaquedicas"> Alt </span><%= @admin_trabalho.seo.alt %><br />
-          <span class="destaquedicas"> Description </span><%= @admin_trabalho.seo.description %><br />     
+  <label class="label">Descrição</label>
+  <p><%= @trabalho.seo.description %></p>
+</div>
 
-        </p>
-        
-        <h1 class="tituloimg" >Títulos para sessão de imagens</h1>
-        <p class="textoshow">
-          <ul>
-
-            <li> <%= @admin_trabalho.cover_name %> <%= image_tag @admin_trabalho.cover.thumb('64x64').url %></li><br />
-            Página Inicial
-            <li> <%= @admin_trabalho.side_cover.cover_name %> <%= image_tag @admin_trabalho.side_cover.cover.thumb('64x64').url %></li><br />
-
-          </ul>
-        </p>
-        
-
- </div><!-- Fim div coluna Direita -->
-      
+<div class="form-actions">
+  <%= link_to "Voltar", admin_trabalhos_path, :class => 'btn'  %>
+  <%= link_to "Editar", edit_admin_trabalho_path(@trabalho), :class => 'btn' %>
+  <%= link_to "Excluir", admin_trabalho_path(@trabalho), :method => "delete", :confirm => "#{t("web-app-theme.confirm", :default => "Confirmar Exclusão?")}", :class => 'btn' %>
+</div>

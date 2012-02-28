@@ -4,8 +4,6 @@ class CreateCapaPortfolios < ActiveRecord::Migration
     create_table :capa_portfolios do |t|
       t.references :projeto
       t.string :descricao
-      t.string :cover_uid
-      t.string :cover_name
 
       t.timestamps
     end

@@ -11,7 +11,7 @@ class Projeto < ActiveRecord::Base
   accepts_nested_attributes_for :projeto_imagems, :reject_if => lambda { |a| a['imagem'].blank? },:allow_destroy => true
   accepts_nested_attributes_for :profissionals, :reject_if => lambda { |a| a['nome'].blank? },:allow_destroy => true
 
-  image_accessor :cover
+  has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
   extend FriendlyId
   friendly_id :titulo, :use => :slugged

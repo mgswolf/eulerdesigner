@@ -1,0 +1,6 @@
+module HomeHelper
+
+  def ultimos_trabalhos
+    @projetos = Projetos.recente.limit(5)
+  end
+end

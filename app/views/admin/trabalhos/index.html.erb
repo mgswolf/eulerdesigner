@@ -1,24 +1,29 @@
-<div id="colunaesquerda">
-  <nav>
-    <ul class="menuesquerdo">
-      <li><a href="/admin">Trabalhos</a></li>
-      <li><a href="/admin/trabalhos/new" title="Clique para criar um novo cadastro">Cadastrar Trabalho</a></li>
-    </ul>
-  </nav>
-</div><!-- Fim div coluna esquerda -->
-
-<div id="colunadireita">
-  <h1 class="barraformulario" >
-    Apoio
-  </h1>
-
-  <h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
-  <p class="textodicas">
-    <span class="destaquedicas">Listar Conteúdo Sobre:  </span> Esta opção apresentará todos os conteúdos sobre os trabalhos que eu participei cadastrados em ordem alfabética.  <br /> <br></br>
-  </p>
-
-  <div id="apoio">
-    <%= render 'trabalho' %>
-  </div>
-
-</div><!-- Fim div coluna Direita -->
+<h1>Projetos</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>
+      Titulo
+    </th>
+    <th>Creado em</th>
+    <th>Açoes</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @trabalhos.each do |trabalho| -%>
+      <tr>
+        <td><%= trabalho.id %></td>
+        <td><%= link_to trabalho.titulo, admin_trabalho_path(trabalho) %>
+        </td>
+        <td><%= trabalho.created_at %></td>
+        <td>
+          <%= link_to "Show", admin_trabalho_path(trabalho) %>
+          <%= link_to "Edit", edit_admin_trabalho_path(trabalho) %>
+          <%= link_to "Destroy", admin_trabalho_path(trabalho), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Confirmar exclusão?")}" %>
+        </td>
+      </tr>
+  <% end -%>
+  </tbody>
+</table>
+<%= link_to "Novo", new_admin_trabalho_path, :class => 'btn btn-primary' %>

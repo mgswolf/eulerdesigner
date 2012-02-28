@@ -29,7 +29,8 @@
         float: left;
         padding: 15px;
         background: url("Texturebg.png");
-        font-family:  Arial, Verdana, sans-serife;        
+        font-family:  Arial, Verdana, sans-serife;
+
       }
       .contentMeioPagina .boxHorizontal form fieldset{
         width: auto;
@@ -67,7 +68,7 @@
 
       .contentMeioPagina .boxHorizontal form fieldset p textarea{
         width: 443px;
-        height: 215px;        
+        height: 238px;
         font-family:  Arial, Verdana, sans-serife;
         margin: 0 0 0 7px;
         display: block;
@@ -92,7 +93,7 @@
         color: #ffffff;
       }
       .contentMeioPagina .boxHorizontal form fieldset div.enviar input{
-        width: 110px;
+        width: 115px;
         height: 30px;
         *margin-top: -20px;
         display: block;
@@ -103,10 +104,11 @@
         color: #de3612;
         font-size: 13pt;
         cursor: pointer;
+
       }
       .contentMeioPagina .boxHorizontal form fieldset div.enviar input:hover{
         color: #FFFFFF;
-        background: #de3612; 
+        background: #de3612;
       }
 
 /******************* Fim Pagina Contato *******************/

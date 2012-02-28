@@ -11,8 +11,6 @@ class CreateProjetos < ActiveRecord::Migration
       t.string :ano
       t.string :url
       t.string :status
-      t.string :cover_uid
-      t.string :cover_name
       t.text :cover_descricao
 
       t.timestamps

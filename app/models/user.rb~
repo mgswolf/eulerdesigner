@@ -1,0 +1,5 @@
+class User < ActiveRecord::Base
+  acts_as_authentic
+  extend FriendlyId
+  has_friendly_id :login, :use_slug => true
+end

@@ -1,11 +1,8 @@
 # -*- encoding : utf-8 -*-
 class Avatar < ActiveRecord::Base
   belongs_to :sobre
-  image_accessor :imagem do
-    storage_path{ "/avatar/#{imagem_name}" } 
-  end
 
-  validates :imagem, :presence => true
+  has_attached_file :imagem, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
 
 

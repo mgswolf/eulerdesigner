@@ -2,13 +2,15 @@
   <% if !f.object.new_record? %>
   <p>
     <div class="editimg">
-      <%= image_tag f.object.imagem.thumb('230x180').url %>
+      <%= image_tag f.object.imagem(:thumb) %>
     </div>
   </p>
   <% end %>
-  <p>
-    <label class="labels">Selecione a Imagem</label>
-    <%= f.file_field :imagem %>
-    <%= f.hidden_field :retained_imagem %>
-  </p>
+  <div class="clearfix">
+    <%= f.label :imagem, t("activerecord.attributes.sobre.nome", :default => "Selecione a Imagem"), :class => :label %>
+    <div class="input">
+      <%= f.file_field :imagem %>
+    </div>
+  </div>
+
 

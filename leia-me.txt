@@ -1,0 +1,7 @@
+para gerar os cadastros iniciais no banco:
+
+rake db:seed
+
+login: euler
+senha: 123844
+

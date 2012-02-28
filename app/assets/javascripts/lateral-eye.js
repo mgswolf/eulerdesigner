@@ -18,7 +18,7 @@
 	keys['']=9;
 	keys['']=2;
 	keys['']=2;
-	img_base='/system/dragonfly/development/avatar';$(document).ready(function(){resetDirs=function(){
+	img_base='/system/dragonfly/development/avatar/';$(document).ready(function(){resetDirs=function(){
 		dir=['c','s','sv','v','nv','n','ne','e','se','s','c1','cc'];
 		}
 	resetDirs();
@@ -29,10 +29,7 @@
 		(new Image()).src=img_base+$(this).attr('rel')+'_'+dir[direction]+'.png';
 		}});
 	$("#cont").show();
-	for(key in keys)
-	{
-		eval("$(window).jkey('"+key+"', function(){changeAll("+keys[key]+");})");
-		}
+
 	$('#allfun').click(function(){changeAll(10)});
 	$('#down').click(function(){changeAll(1)});
 	$('#rup').click(function(){forFun();});

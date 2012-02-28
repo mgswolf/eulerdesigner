@@ -3,8 +3,6 @@ class CreateAvatars < ActiveRecord::Migration
   def change
     create_table :avatars do |t|
       t.references :sobre
-      t.string :imagem_uid
-      t.string :imagem_name
 
       t.timestamps
     end

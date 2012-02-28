@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,29 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111102004806) do
+ActiveRecord::Schema.define(:version => 20120220221240) do
 
   create_table "admin_sobres", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "admin_trabalhos", :force => true do |t|
-    t.string   "cover_uid"
-    t.string   "cover_name"
-    t.string   "titulo"
-    t.string   "url"
-    t.string   "descricao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "avatars", :force => true do |t|
     t.integer  "sobre_id"
-    t.string   "imagem_uid"
-    t.string   "imagem_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imagem_file_name"
+    t.string   "imagem_content_type"
+    t.integer  "imagem_file_size"
+    t.datetime "imagem_updated_at"
   end
 
   add_index "avatars", ["sobre_id"], :name => "index_avatars_on_sobre_id"
@@ -40,10 +33,12 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
   create_table "capa_portfolios", :force => true do |t|
     t.integer  "projeto_id"
     t.string   "descricao"
-    t.string   "cover_uid"
-    t.string   "cover_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   add_index "capa_portfolios", ["projeto_id"], :name => "index_capa_portfolios_on_projeto_id"
@@ -60,13 +55,15 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
   add_index "profissionals", ["projeto_id"], :name => "index_profissionals_on_projeto_id"
 
   create_table "projeto_imagems", :force => true do |t|
-    t.string   "imagem_uid"
-    t.string   "imagem_name"
     t.string   "caption"
     t.string   "descricao"
     t.integer  "projeto_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imagem_file_name"
+    t.string   "imagem_content_type"
+    t.integer  "imagem_file_size"
+    t.datetime "imagem_updated_at"
   end
 
   add_index "projeto_imagems", ["projeto_id"], :name => "index_projeto_imagems_on_projeto_id"
@@ -81,11 +78,13 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
     t.string   "ano"
     t.string   "url"
     t.string   "status"
-    t.string   "cover_uid"
-    t.string   "cover_name"
     t.text     "cover_descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
   end
 
   add_index "projetos", ["slug"], :name => "index_projetos_on_slug", :unique => true
@@ -110,10 +109,12 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
 
   create_table "side_covers", :force => true do |t|
     t.integer  "trabalho_id"
-    t.string   "cover_uid"
-    t.string   "cover_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imagem_file_name"
+    t.string   "imagem_content_type"
+    t.integer  "imagem_file_size"
+    t.datetime "imagem_updated_at"
   end
 
   add_index "side_covers", ["trabalho_id"], :name => "index_side_covers_on_trabalho_id"
@@ -130,13 +131,27 @@ ActiveRecord::Schema.define(:version => 20111102004806) do
     t.string   "nome"
     t.string   "title"
     t.string   "url"
-    t.string   "imagem_uid"
-    t.string   "imagem_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "imagem_file_name"
+    t.string   "imagem_content_type"
+    t.integer  "imagem_file_size"
+    t.datetime "imagem_updated_at"
   end
 
   add_index "socials", ["sobre_id"], :name => "index_socials_on_sobre_id"
+
+  create_table "trabalhos", :force => true do |t|
+    t.string   "titulo"
+    t.string   "url"
+    t.text     "descricao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "login"

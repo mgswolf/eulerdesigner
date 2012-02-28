@@ -1,19 +1,24 @@
 <% if projetos.blank? %>
 Desculpe não há nenhum projeto nesta categoria
-<% end %>			
+<% end %>
 <ul class="contentPortfolio">
 				<% projetos.each do |projeto| %>
        <li>
 					<h2><%= projeto.titulo %></h2>
-					<%= link_to portfolio_path(projeto) , :class=>"box" do %>					
-						<%= image_tag projeto.capa_portfolio.cover.url %>
-						<span>
-         <%=raw projeto.descricao.truncate(200) %>
-						</span>
-						<span class="vejaMais">[Veja+]</span>
-					<% end %>
+					  <%= link_to portfolio_path(projeto) , :class=>"box" do %>
+						  <%= image_tag projeto.capa_portfolio.cover.url %>
+						  <span>
+                <%=raw projeto.descricao.truncate(200) %></p>
+						  </span>
+						  <span class="vejaMais">
+						    [Veja+]
+						  </span>
+					  <% end %>
 				</li>
+
+
+
 					<% end %>
-		
+
 			</ul><!-- Fim Content Portfolio -->
 <%= will_paginate projetos %>

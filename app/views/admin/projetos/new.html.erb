@@ -1,1 +1,3 @@
-<%= render 'form' %>
+<%= form_for @projeto, :url => admin_projetos_path, :html => { :class => :form } do |f| -%>
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>

@@ -1,90 +1,133 @@
-				<div id="colunaesquerda">
-					<nav>	
-						<ul class="menuesquerdo">
-								<li><a href="/admin/projetos">Início</a></li>
-						</ul>
-					</nav>	
-				</div><!-- Fim div coluna esquerda -->
-				
-				<div id="colunadireita">
-				
-				<h1 class="barradicas" >Dicas para cadastrar esta sessão</h1>
-				<p class="textodicas">
-					<span class="destaquedicas"> Lorem Ipsum </span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type  <br /> <span class="destaquedicas"> Lorem Ipsum </span>and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				</p>
 
-				<h1 class="barraformulario" >
-					Este formulário é referente ao cadastro do banner localizado no topo, caso tenha alguma duvida, consulte as dicas acima ou o manual de usuário.
-				</h1>
+<div class="clearfix">
+   <%= f.label :titulo, t("activerecord.attributes.projeto.titulo", :default => "Titulo"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :titulo, :class => 'text_field' %>
+  </div>
+</div>
 
-  <%= form_for [:admin, @projeto] do |f| %>
-<fieldset class="fieldes">
-<legend class="legends" >Básico</legend>
-<p>
-<label class="labels">Titulo:</label>
- <%= f.text_field :titulo %>
-</p>
-<p>
-<label class="labels">Cliente:</label>
- <%= f.text_field :cliente %>
-</p>
-<p>
-<label class="labels">Ano:</label>
- <%= f.text_field :ano %>
-</p>
-<p>
-<label class="labels">Url:</label>
-   <%= f.url_field :url %>
-</p>
-<p>
-<label class="labels">Categoria:</label>
-<%=f.select :categoria, ([["Site", "Site"], ["Impresso","Impresso"], ["Logotipo","Logotipo"], ["Outro","Outro"]]), :class=>"selectoptions" %><br />
-</p><br />
-<p>
-<label class="labels">Descrição:</label>
-     <%= f.cktext_area :descricao %>
-</p>
+<div class="clearfix">
+   <%= f.label :categoria, t("activerecord.attributes.projeto.categoria", :default => "Categoria"), :class => :label %>
+  <div class="input">
+    <%= f.select :categoria, ([["Site", "Site"], ["Impresso","Impresso"], ["Logotipo","Logotipo"], ["Outro","Outro"]]), :class => 'select_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :cliente, t("activerecord.attributes.projeto.cliente", :default => "Cliente"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :cliente, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :descricao, t("activerecord.attributes.projeto.descricao", :default => "Descricao"), :class => :label %>
+  <div class="input">
+    <%= f.cktext_area :descricao, :class => 'text_area span8' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :tecnologia, t("activerecord.attributes.projeto.tecnologia", :default => "Tecnologia"), :class => :label %>
+  <div class="input">
+    <%= f.text_area :tecnologia, :class => 'text_area span8' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :ano, t("activerecord.attributes.projeto.ano", :default => "Ano"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :ano, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :url, t("activerecord.attributes.projeto.url", :default => "Url"), :class => :label %>
+  <div class="input">
+    <%= f.url_field :url, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :status, t("activerecord.attributes.projeto.status", :default => "Status"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :status, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+  <%= f.label :cover, t("activerecord.attributes.projeto.cover_descricao", :default => "Cover"), :class => :label %>
+  <div class="input">
+    <%= f.file_field :cover, :class => 'input' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :cover_descricao, t("activerecord.attributes.projeto.cover_descricao", :default => "Cover descricao"), :class => :label %>
+  <div class="input">
+    <%= f.text_area :cover_descricao, :class => 'text_area' %>
+  </div>
+</div>
+
+<div class="well">
+<fieldset>
+  <legend class="legends" >Capa Portfolio</legend>
+  <%= f.fields_for :capa_portfolio do |cp| %>
+      <div class="clearfix">
+        <%= f.label :imagem,"Imagem: tamanho 442×224" , :class => :label %>
+        <div class="input">
+      <%= cp.file_field :cover %>
+        </div>
+      </div>
+      <div class="clearfix">
+        <%= f.label :descricao,"Descrição" , :class => :label %>
+        <div class="input">
+      <%= cp.text_area :descricao, :class => "textarea span8" %>
+      </div>
+      </div>
+  <% end %>
 </fieldset>
- 							<fieldset class="fieldes">
-								<legend class="legends" >Slider Home</legend>
-     <%= f.file_field :cover %><span class="hint">tamanho 608×260 </span>
-     Descrição Slider Home:<%= f.text_area :cover_descricao %>
+</div>
+
+<div class="well">
+<fieldset>
+  <legend class="legends" >SEO</legend>
+  <%= f.fields_for :seo do |seo| %>
+      <%= render "/shared/complete_seo", :seo => seo %>
+  <% end %>
 </fieldset>
-  							<fieldset class="fieldes">
-								<legend class="legends" >Capa Portfolio</legend>
- <%= f.fields_for :capa_portfolio do |cp| %>
-        <%= cp.file_field :cover %><span class="hint">tamanho 442×224 </span>
-        <%= cp.text_area :descricao %>
-    <% end %>
-</fieldset>
-   							<fieldset class="fieldes">
-								<legend class="legends" >SEO</legend>
- <%= f.fields_for :seo do |seo| %>
-   <%= render "/shared/complete_seo", :seo => seo %>
- <% end %>
-</fieldset>
-   							<fieldset class="fieldes">
-								<legend class="legends" >Imagens</legend>
- <div id="Imagens">
-      <%= f.fields_for :projeto_imagems do |builder| %>
+</div>
+
+<div class="well">
+<fieldset>
+  <legend class="legends" >Imagens</legend>
+  <div id="Imagens">
+    <%= f.fields_for :projeto_imagems do |builder| %>
         <%= render "projeto_imagem_fields", :f => builder %>
     <% end %>
-      <%= link_to_add_fields "Adicionar Imagem", f, :projeto_imagems %>
-</div>
+    <%= link_to_add_fields "Adicionar Imagem", f, :projeto_imagems %>
+  </div>
 </fieldset>
-   							<fieldset class="fieldes">
-								<legend class="legends" >Profissionais</legend>
- <div id="Profissionais">
-      <%= f.fields_for :profissionals do |builder| %>
+</div>
+
+<div class="well">
+<fieldset>
+  <legend class="legends" >Profissionais</legend>
+  <div id="Profissionais">
+    <%= f.fields_for :profissionals do |builder| %>
         <%= render "profissional_fields", :f => builder %>
     <% end %>
-      <%= link_to_add_fields "Adicionar Profissional", f, :profissionals %>
-</div>
+    <%= link_to_add_fields "Adicionar Profissional", f, :profissionals %>
+  </div>
 </fieldset>
-    <%= f.submit %>
-  <% end %>
+</div>
 
- </div><!-- Fim div coluna Direita -->
+<div class="form-actions">
+  <button class="btn primary" type="submit">Save</button> or
+	<%= link_to "Cancel", admin_projetos_path %>
+</div>
+
+
 <%= content_for :head do %>
-<%= javascript_include_tag "ckeditor/ckeditor.js" %>
-<% end %> 
+    <%= javascript_include_tag "ckeditor/ckeditor.js" %>
+<% end %>

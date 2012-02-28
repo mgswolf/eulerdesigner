@@ -6,8 +6,6 @@ class CreateSocials < ActiveRecord::Migration
       t.string :nome
       t.string :title
       t.string :url
-      t.string :imagem_uid
-      t.string :imagem_name
 
       t.timestamps
     end

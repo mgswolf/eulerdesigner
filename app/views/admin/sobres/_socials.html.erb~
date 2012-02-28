@@ -1,0 +1,10 @@
+<div class="fields">
+<%= f.input :nome %>
+<%= f.input :url, :as => :url %>
+<%= f.input :imagem, :as => :file %>
+<%= f.input :retained_imagem, :as => :hidden %> 
+<% unless f.object == nil || f.object.new_record? %>
+  <%= f.input :_delete, :as => :boolean %>
+<% end %>
+</div>
+

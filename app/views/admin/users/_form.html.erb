@@ -1,54 +1,52 @@
-<h1 class="barradicas" title="Clique para visualizar algumas dicas para o preencimento deste cadastro" >Dicas para cadastrar esta sessão</h1>
-
-<p class="textodicas">
-   <span class="destaquedicas"> Listar Usuários: </span> Está opção retornará a página de Usuários cadastrados. <br /> <br>
-   <span class="destaquedicas"> Nome: </span> Digite o nome da usuário.<br /> <br>
-  <span class="destaquedicas"> Salvar: </span> Clique para salvar o cadastro.<br /> <br>
-</p>
-<%= form_for([:admin,@user]) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this usuario from being saved:</h2>
-
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-<fieldset class="fieldes">
-  <legend class="legends" >Usuário</legend>
-  <p>
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-    <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-
-  <br />
-  <p>
-    <%= f.submit %>
-  </p>
-</fieldset>  
+<% if @user.errors.any?%>
+<div class="alert alert-error">
+<%=  f.error_messages %>
+</div>
 <% end %>
-<p>
-   <a href="/admin/users" class="voltar">Voltar</a>
-</p>
+<div class="clearfix">
+   <%= f.label :login, t("activerecord.attributes.user.login", :default => "Login"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :login, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :nome, t("activerecord.attributes.user.nome", :default => "Nome"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :nome, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :email, t("activerecord.attributes.user.email", :default => "Email"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :email, :class => 'text_field' %>
+  </div>
+</div>
 
 
+<div class="clearfix">
+   <%= f.label :role_id, t("activerecord.attributes.user.role_id", :default => "Role"), :class => :label %>
+  <div class="input">
+    <%= f.number_field :role_id, :class => 'number_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+   <%= f.label :password, t("activerecord.attributes.user.crypted_password", :default => "Password"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :password, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="clearfix">
+  <%= f.label :password_confirmation, t("activerecord.attributes.user.crypted_password", :default => "Password Confirmation"), :class => :label %>
+  <div class="input">
+    <%= f.text_field :password_confirmation, :class => 'text_field' %>
+  </div>
+</div>
+
+<div class="form-actions">
+  <button class="btn primary" type="submit">Save</button> or
+	<%= link_to "Cancel", admin_users_path %>
+</div>

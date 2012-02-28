@@ -1,4 +1,4 @@
-<ul class="menuPortfolio">
+l<ul class="menuPortfolio">
 				<li><a href="/portfolio" title="Veja todos os trabalhos">Todos os trabalhos</a></li> <!-- Class VISITED indica em que página o user está -->
 				<li><%= link_to "Sites", '/portfolio/sites', :title=>"Veja todos os projetos de sites, layouts, html, programção e css" %></li>
 				<li><%= link_to "Logotipos",  '/portfolio/logotipos', :title=>"Confira todos os trabalhos na criação de identidades visuais" %></li>
@@ -35,21 +35,21 @@
 					<p>
 					<%= link_to @projeto.url, @projeto.url, :target=> :blank, :title=>"Acesse o site "+@projeto.titulo %> - está <%= @projeto.status %>.
 					</p>
-				</div><!-- Fim div content small Coll -->			
+				</div><!-- Fim div content small Coll -->
 			</div><!-- Fim div smallColl -->
 			<div class="greatColl">
 				<h2 class="titleGreatColl">Titulo Great Coll</h2>
 				<div class="contentGreatColl">
-					
-				
+
+
 					<ul class="galleryimages">
            <% @projeto.projeto_imagems.each do |img| %>
 						<li style="display: none;"><%= image_tag img.imagem.url %><%= img.caption %></li>
-            <% end %>  
-						
+            <% end %>
+
 					</ul>
-		
-				
+
+
 				</div><!-- Fim div contentGreatColl -->
 			</div><!-- Fim div greatColl -->
 

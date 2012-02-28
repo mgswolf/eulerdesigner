@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.1'
+gem 'rails', '3.1.3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -9,12 +9,15 @@ gem 'mysql2'
 gem "friendly_id", "~> 4.0.0.beta14" #http://norman.github.com/friendly_id/
 gem 'json'
 gem 'rack-cache', :require => 'rack/cache'
-gem 'dragonfly' #https://github.com/markevans/dragonfly
+gem 'paperclip'
 gem 'ckeditor' #https://github.com/galetahub/ckeditor
 gem 'will_paginate'
 #gem 'rails_best_practices'
 gem 'delayed_job' #github.com/collectiveidea/delayed_job
 gem 'authlogic'
+gem 'dynamic_form'
+
+gem 'capistrano'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -29,11 +32,10 @@ gem 'therubyracer' #javascript runtime
 
 # Use unicorn as the web server
 group :development do
- gem 'unicorn'
+  gem 'unicorn'
 end
 # Deploy with Capistrano
 # gem 'capistrano'
 
 # To use debugger
 # gem 'ruby-debug'
-

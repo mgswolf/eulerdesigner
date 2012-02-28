@@ -1,21 +1,20 @@
 <div class="fields">
-  <fieldset class="fieldes">
-      <label class="labels">Imagem</label>
-      <%= f.file_field :cover, %>
-      <%= f.hidden_field :retained_cover %>
+
+
+<div class="clearfix">
+  <%= f.label :imagem, :class => :label %>
+  <div class="input">
+      <%= f.file_field :imagem, %>
       <% unless f.object == nil || f.object.new_record? %>
-      <%= image_tag f.object.cover.thumb('64x64').url %>
+      <%= image_tag f.object.imagem(:thumb) %>
       <% end %>
-    </p>
-    <br />
-    <p>
-      
-SEO:<hr />
+  </div>
+</div>
+
+<h3>SEO</h3><hr />
 <% @seo = f.object.build_seo %>
  <%= f.fields_for :seo, f.object.seo do |seo| %>
    <%= render 'shared/simple_seo', :seo => seo %>
     <% end %>
 <br />
-    </p>
-  </fieldset>
 </div>

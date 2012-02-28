@@ -4,9 +4,9 @@ class Social < ActiveRecord::Base
   has_one :seo, :as=> :seoable
   accepts_nested_attributes_for :seo
 
-  image_accessor :imagem
+  has_attached_file :imagem, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
-  validates :imagem_uid, :imagem_name, :url, :nome, :presence => true
+  validates  :url, :nome, :presence => true
   validates :nome, :url, :uniqueness => true
 end
 

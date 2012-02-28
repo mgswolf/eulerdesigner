@@ -1,41 +1,9 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
-
-//Efeito de Toggle - Dica
-$(document).ready(function(){
-
-   $("h1.barradicas").click(function(){
-		$(".textodicas").toggle("slow,");
-	});
-});
-
-//Efeito Toggle - Show ADM
-$(document).ready(function(){
-
-    $("h1.titulotexto").click(function(){
-		$(this).next(".textoshow").toggle("slow,");
-	});
-
-    $("h1.titulofile").click(function(){
-		$(this).next(".textoshow").toggle("slow,");
-	});
-
-    $("h1.titulovideos").click(function(){
-		$(this).next(".textoshow").toggle("slow,");
-	})
-
-    $("h1.tituloimg").click(function(){
-		$(this).next(".textoshowimg").toggle("slow,");
-	})
-
-    $("h1.titulotable").click(function(){
-		$(this).next(".textoshowtable").toggle("slow,");
-	})
-
-    $("h1.barrabuscas").click(function(){
-		$(this).next(".formbuscas").toggle("slow,");
-	})
-});
+//= require jquery
+//= require jquery_ujs
+//= require_self
+//= require_tree .
 
 //Paginação e Ordenação
 $(function() {

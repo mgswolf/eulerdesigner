@@ -1,6 +1,4 @@
-<h1>Editing usuario</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @usuario %> |
-<%= link_to 'Back', admin_users_path %>
+<%= form_for @user, :url => admin_user_path(@user), :html => { :class => "edit_user", :id => "edit_user" } do |f| -%>
+  <input name="_method" type="hidden" value="put" />
+  <%= render :partial => "form", :locals => {:f => f} %>
+<% end -%>

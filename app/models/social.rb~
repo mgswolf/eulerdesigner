@@ -1,0 +1,8 @@
+class Social < ActiveRecord::Base
+  belongs_to :sobre
+  #image_accessor :imagem
+
+  validates :imagem_uid, :imagem_name, :url, :nome, :presence => true
+  validates :nome, :url, :uniqueness => true
+end
+

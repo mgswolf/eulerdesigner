@@ -2,17 +2,16 @@
 class PortfolioController < ApplicationController
   before_filter :get_projeto, :only=>[:show]
   before_filter :get_seo, :except=>[:show]
-
   def index
     @projetos = Projeto.paginate(:per_page => 10, :page => params[:page])
 
   end
-  
+
   def show
-   @title= @projeto.titulo
-   @description= @projeto.seo.description unless @projeto.seo.nil?
+    @title= @projeto.titulo
+    @description= @projeto.seo.description unless @projeto.seo.nil?
   end
-  
+
   def sites
     @projetos = Projeto.site.paginate(:per_page => 10, :page => params[:page])
   end
@@ -30,7 +29,7 @@ class PortfolioController < ApplicationController
   end
 
   private
-  
+
   def get_projeto
     @projeto= Projeto.find(params[:id])
   end

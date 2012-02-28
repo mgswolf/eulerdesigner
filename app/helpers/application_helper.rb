@@ -1,5 +1,12 @@
 # -*- encoding : utf-8 -*-
 module ApplicationHelper
+  def flash_class(level)
+  case level
+  when :notice then 'info'
+  when :error then 'error'
+  when :alert then 'warning'
+  end
+  end
     def link_to_remove_fields(name, f)
     f.hidden_field(:_destroy) + link_to_function(name, "remove_fields(this)")
   end

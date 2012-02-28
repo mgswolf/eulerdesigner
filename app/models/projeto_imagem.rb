@@ -4,9 +4,6 @@ class ProjetoImagem < ActiveRecord::Base
   has_one :seo, :as=> :seoable, :dependent => :destroy
   accepts_nested_attributes_for :seo
 
-  image_accessor :imagem
-
-
-  validates :imagem_uid, :imagem_name, :presence => true
+  has_attached_file :imagem, :styles => { :medium => "629x629>", :thumb => "100x100>" }
 end
 
