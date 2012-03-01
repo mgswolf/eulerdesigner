@@ -14,6 +14,7 @@
 <p><%= image_tag @trabalho.side_cover.imagem(:thumb) unless @trabalho.side_cover.nil? %></p>
 
 <div class="well">
+<% unless @trabalho.seo.nil? %>
  <h3>SEO</h3>
   <label class="label">Title</label>
   <p><%= @trabalho.seo.title %></p>
@@ -24,6 +25,7 @@
   <label class="label">Descrição</label>
   <p><%= @trabalho.seo.description %></p>
 </div>
+<% end %>
 
 <div class="form-actions">
   <%= link_to "Voltar", admin_trabalhos_path, :class => 'btn'  %>

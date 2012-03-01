@@ -22,4 +22,10 @@ module ApplicationHelper
    def about_atual
     @sobre= Sobre.last
    end
+
+   def seo_show(resource)
+     unless resource.seo.nil?
+           "<b>SEO Title: </b> #{resource.seo.title} <b>SEO ALT: </b>      #{resource.seo.alt}".html_safe
+     end
+   end
 end

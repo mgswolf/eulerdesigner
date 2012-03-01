@@ -17,7 +17,6 @@ class Admin::ProjetosController < ApplicationController
   end
 
   def edit
-    side_cover = @projeto.build_side_cover unless @projeto.side_cover
     capa_portfolio = @projeto.build_capa_portfolio unless @projeto.capa_portfolio
   end
 
@@ -40,6 +39,7 @@ class Admin::ProjetosController < ApplicationController
 
   def destroy
     @projeto.destroy
+    redirect_to admin_projetos_url
   end
 
   private

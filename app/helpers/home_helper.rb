@@ -5,6 +5,6 @@ module HomeHelper
   end
 
   def ultimos_trabalhos
-    @trabalhos = Admin::Trabalho.recente.limit(5)
+    @trabalhos = Trabalho.recente.limit(5)
   end
 end

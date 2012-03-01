@@ -1,3 +1,4 @@
+<h2>Editar Trabalho - Portfolio</h2>
 <%= form_for @projeto, :url => admin_projeto_path(@projeto), :html => { :class => "edit_projeto", :id => "edit_projeto" } do |f| -%>
   <input name="_method" type="hidden" value="put" />
   <%= render :partial => "form", :locals => {:f => f} %>

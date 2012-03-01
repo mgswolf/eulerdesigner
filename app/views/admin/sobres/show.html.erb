@@ -5,18 +5,18 @@
 <label class="label"><%= t("activerecord.attributes.admin_sobre.descricao", :default => t("activerecord.labels.descricao", :default => "Descricao")) %>:</label>
 <p><%= sanitize(@sobre.descricao) %></p>
 
-
+<!-- avatar não utilizado
 <label class="label">Avatar Imagens</label>
-<% @sobre.avatars.each do |avatar| %>  
+<% @sobre.avatars.each do |avatar| %>
 <%= image_tag avatar.imagem(:thumb) %>
  <% end %>
-
+-->
 <div class="well">
   <h3>Social Itens</h3>
   <% @sobre.socials.each do |social| %>
       <label class="label"><%=  social.nome %></label>
       <p><%= image_tag social .imagem(:thumb) %> <%=  social.url %>
-      <b>SEO Title: </b><%=  social.seo.title %> <b>SEO ALT: </b><%= social.seo.alt %>
+       <%= seo_show(social) %>
       </p>
   <% end %>
 </div>

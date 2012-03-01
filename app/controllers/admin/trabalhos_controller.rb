@@ -37,7 +37,7 @@ class Admin::TrabalhosController < ApplicationController
 
   # GET /admin/trabalhos/1/edit
   def edit
-
+    @side_cover = @trabalho.build_side_cover if @trabalho.side_cover.nil?
   end
 
   # POST /admin/trabalhos
@@ -75,11 +75,7 @@ class Admin::TrabalhosController < ApplicationController
   # DELETE /admin/trabalhos/1.json
   def destroy
     @trabalho.destroy
-
-    respond_to do |format|
-      format.html { redirect_to admin_trabalhos_url }
-
-    end
+     redirect_to admin_trabalhos_url
   end
 
   private

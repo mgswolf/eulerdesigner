@@ -28,7 +28,7 @@
     <% trabalhos.each do |trabalho| %>
    <% unless trabalho.side_cover.nil? %>
     <li>
-      <%= link_to image_tag(trabalho.side_cover.cover(:medium)), trabalho.url, :target=>:blank, :title=>trabalho.seo.title, :alt=> trabalho.seo.alt  %>
+      <%= link_to image_tag(trabalho.side_cover.imagem(:medium)), trabalho.url, :target=>:blank, :title=>trabalho.seo.title, :alt=> trabalho.seo.alt  %>
     </li>
     <% end %>
     <% end %>

@@ -10,7 +10,7 @@
       <%  trabalho_participo.each do |trabalho| %>
       <div>
         <h4><%= trabalho.titulo %></h4>
-        <%= image_tag trabalho.cover.url, :alt=> trabalho.seo.alt %>
+        <%= image_tag trabalho.cover(:medium), :alt=> trabalho.seo.alt %>
         <p class="descricao">
           <%= raw trabalho.descricao %>
         </p>

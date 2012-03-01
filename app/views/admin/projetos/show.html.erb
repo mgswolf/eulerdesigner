@@ -39,8 +39,8 @@
       <label class="label"><%=  imagem.caption %></label>
       <p><%= image_tag imagem.imagem(:thumb) %></p>
       <p>
-         <b>Descriçãp: </b><%= imagem.descricao %>
-        <b>SEO Title: </b><%=  imagem.seo.title %> <b>SEO ALT: </b><%= imagem.seo.alt %>
+         <b>Descrição: </b><%= imagem.descricao %>
+         <%= seo_show(imagem) %>
       </p>
   <% end %>
 </div>
@@ -51,7 +51,7 @@
       <label class="label"><%=  profissional.nome %></label>
       <p>
         <b>URL: </b><%= profissional.url %>
-        <b>SEO Title: </b><%=  profissional.seo.title %> <b>SEO ALT: </b><%= profissional.seo.alt %>
+        <%= seo_show(profissional) %>
       </p>
       <p><b>Descrição: <%= profissional.descricao %></b></p>
   <% end %>

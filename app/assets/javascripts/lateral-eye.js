@@ -18,7 +18,7 @@
 	keys['']=9;
 	keys['']=2;
 	keys['']=2;
-	img_base='/system/dragonfly/development/avatar/';$(document).ready(function(){resetDirs=function(){
+	img_base='/system/avatar/';$(document).ready(function(){resetDirs=function(){
 		dir=['c','s','sv','v','nv','n','ne','e','se','s','c1','cc'];
 		}
 	resetDirs();

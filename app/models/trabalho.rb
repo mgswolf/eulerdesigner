@@ -4,7 +4,7 @@ class Trabalho < ActiveRecord::Base
   accepts_nested_attributes_for :seo
   accepts_nested_attributes_for :side_cover, :reject_if => lambda { |a| a['imagem'].blank? },:allow_destroy => true
 
-  has_attached_file :cover, :styles => { :medium => "300x300>", :thumb => "100x100>" }
+  has_attached_file :cover, :styles => { :medium => "608>x300", :thumb => "100x100>" }
 
   default_scope order(:titulo)
   scope :recente, order("created_at DESC")
